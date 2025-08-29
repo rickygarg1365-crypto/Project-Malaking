@@ -2,10 +2,11 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 export default function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [isAnimating, setIsAnimating] = useState(false)
 
   // Hero content data
   const heroSlides = [
@@ -38,13 +39,52 @@ export default function HomePage() {
     }
   ]
 
-  // Auto-advance carousel
+  // Auto-advance carousel with animation
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % heroSlides.length)
+      setIsAnimating(true)
+      setTimeout(() => {
+        setCurrentSlide((prev) => (prev + 1) % heroSlides.length)
+        setIsAnimating(false)
+      }, 300)
     }, 6000)
     return () => clearInterval(timer)
   }, [heroSlides.length])
+
+  // Manual slide change with animation
+  const changeSlide = (index) => {
+    if (index !== currentSlide && !isAnimating) {
+      setIsAnimating(true)
+      setTimeout(() => {
+        setCurrentSlide(index)
+        setIsAnimating(false)
+      }, 300)
+    }
+  }
+
+  // Intersection Observer for scroll animations
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate')
+        }
+      })
+    }, observerOptions)
+
+    // Observe all elements with animate-on-scroll class
+    const animateElements = document.querySelectorAll('.animate-on-scroll')
+    animateElements.forEach((el) => observer.observe(el))
+
+    return () => {
+      animateElements.forEach((el) => observer.unobserve(el))
+    }
+  }, [])
 
   return (
     <main className="homepage">
@@ -66,11 +106,11 @@ export default function HomePage() {
                 />
                 <div className="hero-overlay"></div>
               </div>
-              <div className="hero-content">
-                <div className="hero-badge">{slide.subtitle}</div>
-                <h1 className="hero-title">{slide.title}</h1>
-                <p className="hero-description">{slide.description}</p>
-                <Link href={slide.ctaLink} className="hero-cta">
+              <div className={`hero-content ${isAnimating ? 'hero-content-animating' : 'hero-content-visible'}`}>
+                <div className="hero-badge reveal-animation">{slide.subtitle}</div>
+                <h1 className="hero-title reveal-animation reveal-delay-1">{slide.title}</h1>
+                <p className="hero-description reveal-animation reveal-delay-2">{slide.description}</p>
+                <Link href={slide.ctaLink} className="hero-cta reveal-animation reveal-delay-3">
                   {slide.cta}
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                     <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -86,7 +126,7 @@ export default function HomePage() {
               <button
                 key={index}
                 className={`hero-dot ${index === currentSlide ? 'active' : ''}`}
-                onClick={() => setCurrentSlide(index)}
+                onClick={() => changeSlide(index)}
               />
             ))}
           </div>
@@ -94,7 +134,7 @@ export default function HomePage() {
           {/* Carousel Arrows */}
           <button 
             className="hero-arrow hero-prev"
-            onClick={() => setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length)}
+            onClick={() => changeSlide((currentSlide - 1 + heroSlides.length) % heroSlides.length)}
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
               <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -102,7 +142,7 @@ export default function HomePage() {
           </button>
           <button 
             className="hero-arrow hero-next"
-            onClick={() => setCurrentSlide((prev) => (prev + 1) % heroSlides.length)}
+            onClick={() => changeSlide((currentSlide + 1) % heroSlides.length)}
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
               <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -147,7 +187,7 @@ export default function HomePage() {
       {/* How It Works Section */}
       <section id="how-it-works" className="steps-section">
         <div className="container">
-          <div className="section-header">
+          <div className="section-header animate-on-scroll">
             <div className="section-badge">How It Works</div>
             <h2 className="section-title">4 Simple Steps</h2>
             <p className="section-subtitle">Create your perfect hot pot experience in just a few easy steps</p>
@@ -157,7 +197,7 @@ export default function HomePage() {
               <div className="progress-bar"></div>
             </div>
             <div className="timeline-steps">
-              <div className="timeline-step">
+              <div className="timeline-step animate-on-scroll">
                 <div className="step-circle">
                   <span className="step-number">01</span>
                 </div>
@@ -167,7 +207,7 @@ export default function HomePage() {
                 </div>
               </div>
               
-              <div className="timeline-step">
+              <div className="timeline-step animate-on-scroll">
                 <div className="step-circle">
                   <span className="step-number">02</span>
                 </div>
@@ -177,7 +217,7 @@ export default function HomePage() {
                 </div>
               </div>
               
-              <div className="timeline-step">
+              <div className="timeline-step animate-on-scroll">
                 <div className="step-circle">
                   <span className="step-number">03</span>
                 </div>
@@ -187,7 +227,7 @@ export default function HomePage() {
                 </div>
               </div>
               
-              <div className="timeline-step">
+              <div className="timeline-step animate-on-scroll">
                 <div className="step-circle">
                   <span className="step-number">04</span>
                 </div>
