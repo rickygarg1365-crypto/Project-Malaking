@@ -12,7 +12,7 @@ export default function HomePage() {
     {
       id: 1,
       title: "Grand Opening Tomorrow!",
-      subtitle: "Friday, November 29th",
+      subtitle: "Friday, August 29th",
       description: "🎉 We're officially opening our doors! Join us for our grand opening celebration and be among the first to experience Surrey's newest hot pot destination.",
       image: "/assets/images/hero-background-77cf30.png",
       cta: "Find Location",
