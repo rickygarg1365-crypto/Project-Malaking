@@ -50,26 +50,27 @@ export default function CareersPage() {
 
   return (
     <>
-      {/* Modern Careers Hero */}
-      <section className="careers-hero-modern">
-        <div className="hero-bg-careers">
+      {/* Hero Section - Recreated */}
+      <section className="careers-hero-simple">
+        <div className="careers-hero-background-simple">
           <Image 
             src="/assets/images/Table.jpg" 
-            alt="Location Hero Background"
+            alt="Careers Hero Background"
             fill
             priority={true}
-            quality={85}
+            quality={90}
             sizes="100vw"
-            className="hero-image"
+            className="careers-hero-image-simple"
+            style={{ objectFit: 'cover' }}
           />
-          <div className="hero-overlay-careers"></div>
+          <div className="careers-hero-overlay-simple"></div>
         </div>
         <div className="container">
-          <div className="careers-hero-content">
-            <h1 className="careers-hero-title">
+          <div className="careers-hero-content-simple">
+            <h1 className="careers-hero-title-simple">
               Join Our <span className="title-white">Team</span>
             </h1>
-            <p className="careers-hero-description">
+            <p className="careers-hero-description-simple">
               Be part of Surrey's premier hot pot destination. We're looking for passionate individuals 
               who want to create exceptional dining experiences and grow with us.
             </p>

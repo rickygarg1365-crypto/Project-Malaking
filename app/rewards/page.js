@@ -7,26 +7,27 @@ export default function RewardsPage() {
       {/* Modern Rewards Page */}
       <section className="rewards-page-modern">
         
-        {/* Hero Section */}
-        <section className="rewards-hero-modern">
-          <div className="hero-bg-rewards">
-                                             <Image 
-             src="/assets/images/Drinks section.jpg" 
-             alt="Rewards Hero Background"
-             fill
-             priority={true}
-             quality={85}
-             sizes="100vw"
-             className="hero-image"
-           />
-            <div className="hero-overlay-rewards"></div>
+        {/* Hero Section - Recreated */}
+        <section className="rewards-hero-simple">
+          <div className="rewards-hero-background-simple">
+            <Image 
+              src="/assets/images/Drinks section.jpg" 
+              alt="Rewards Hero Background"
+              fill
+              priority={true}
+              quality={90}
+              sizes="100vw"
+              className="rewards-hero-image-simple"
+              style={{ objectFit: 'cover' }}
+            />
+            <div className="rewards-hero-overlay-simple"></div>
           </div>
           <div className="container">
-            <div className="rewards-hero-content">
-              <h1 className="rewards-hero-title">
+            <div className="rewards-hero-content-simple">
+              <h1 className="rewards-hero-title-simple">
                 Mala King <span className="title-red">Rewards</span>
               </h1>
-              <p className="rewards-hero-description">
+              <p className="rewards-hero-description-simple">
                 Join our loyalty program and start earning points with every visit. 
                 Unlock exclusive benefits and enjoy special member perks!
               </p>

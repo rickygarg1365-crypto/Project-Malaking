@@ -5,27 +5,28 @@ import Link from 'next/link'
 export default function LocationsPage() {
   return (
     <>
-      {/* Modern Location Hero */}
-      <section className="locations-hero-modern">
-        <div className="hero-bg-locations">
+      {/* Hero Section - Recreated */}
+      <section className="locations-hero-simple">
+        <div className="locations-hero-background-simple">
           <Image 
             src="/assets/images/Checkout Area.jpg" 
             alt="Location Hero Background"
             fill
             priority={true}
-            quality={85}
+            quality={90}
             sizes="100vw"
-            className="hero-image"
+            className="locations-hero-image-simple"
+            style={{ objectFit: 'cover' }}
           />
-          <div className="hero-overlay-locations"></div>
+          <div className="locations-hero-overlay-simple"></div>
         </div>
         <div className="container">
-          <div className="locations-hero-content">
-            <h1 className="locations-hero-title">
+          <div className="locations-hero-content-simple">
+            <h1 className="locations-hero-title-simple">
               Visit Our Surrey<br/>
               <span className="title-red">Location</span>
             </h1>
-            <p className="locations-hero-description">
+            <p className="locations-hero-description-simple">
               Located in the heart of Surrey, we're easily accessible and ready to serve you 
               the best hot pot experience in the city. Come discover your new favorite dining destination.
             </p>

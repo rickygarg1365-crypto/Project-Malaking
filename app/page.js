@@ -89,31 +89,32 @@ export default function HomePage() {
 
   return (
     <main className="homepage">
-      {/* Hero Section */}
-      <section className="hero-section">
-        <div className="hero-carousel">
+      {/* Hero Section - Recreated */}
+      <section className="hero-section-simple">
+        <div className="hero-carousel-simple">
           {heroSlides.map((slide, index) => (
             <div 
               key={slide.id}
-              className={`hero-slide ${index === currentSlide ? 'active' : ''}`}
+              className={`hero-slide-simple ${index === currentSlide ? 'active' : ''}`}
             >
-              <div className="hero-background">
+              <div className="hero-background-simple">
                 <Image 
                   src={slide.image} 
                   alt={slide.title}
                   fill
                   priority={true}
-                  quality={85}
+                  quality={90}
                   sizes="100vw"
-                  className="hero-image"
+                  className="hero-image-simple"
+                  style={{ objectFit: 'cover' }}
                 />
-                <div className="hero-overlay"></div>
+                <div className="hero-overlay-simple"></div>
               </div>
-              <div className={`hero-content ${isAnimating ? 'hero-content-animating' : 'hero-content-visible'}`}>
-                <div className="hero-badge reveal-animation">{slide.subtitle}</div>
-                <h1 className="hero-title reveal-animation reveal-delay-1">{slide.title}</h1>
-                <p className="hero-description reveal-animation reveal-delay-2">{slide.description}</p>
-                <Link href={slide.ctaLink} className="hero-cta reveal-animation reveal-delay-3">
+              <div className="hero-content-simple">
+                <div className="hero-badge-simple">{slide.subtitle}</div>
+                <h1 className="hero-title-simple">{slide.title}</h1>
+                <p className="hero-description-simple">{slide.description}</p>
+                <Link href={slide.ctaLink} className="hero-cta-simple">
                   {slide.cta}
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                     <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -124,11 +125,11 @@ export default function HomePage() {
           ))}
           
           {/* Carousel Navigation */}
-          <div className="hero-nav">
+          <div className="hero-nav-simple">
             {heroSlides.map((_, index) => (
               <button
                 key={index}
-                className={`hero-dot ${index === currentSlide ? 'active' : ''}`}
+                className={`hero-dot-simple ${index === currentSlide ? 'active' : ''}`}
                 onClick={() => changeSlide(index)}
               />
             ))}
@@ -136,7 +137,7 @@ export default function HomePage() {
           
           {/* Carousel Arrows */}
           <button 
-            className="hero-arrow hero-prev"
+            className="hero-arrow-simple hero-prev-simple"
             onClick={() => changeSlide((currentSlide - 1 + heroSlides.length) % heroSlides.length)}
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -144,7 +145,7 @@ export default function HomePage() {
             </svg>
           </button>
           <button 
-            className="hero-arrow hero-next"
+            className="hero-arrow-simple hero-next-simple"
             onClick={() => changeSlide((currentSlide + 1) % heroSlides.length)}
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">

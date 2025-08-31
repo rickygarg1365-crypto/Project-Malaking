@@ -382,26 +382,27 @@ export default function MenuPage() {
 
   return (
     <>
-      {/* Hero Section */}
-      <section className="menu-hero-modern">
-        <div className="hero-bg-menu">
+      {/* Hero Section - Recreated */}
+      <section className="menu-hero-simple">
+        <div className="menu-hero-background-simple">
           <Image
             src="/assets/images/Fresh Ingredients.jpg"
             alt="Menu Hero Background"
             fill
             priority={true}
-            quality={85}
+            quality={90}
             sizes="100vw"
-            className="hero-image"
+            className="menu-hero-image-simple"
+            style={{ objectFit: 'cover' }}
           />
-          <div className="hero-overlay-menu"></div>
+          <div className="menu-hero-overlay-simple"></div>
         </div>
         <div className="container">
-          <div className="menu-hero-content">
-            <h1 className="menu-hero-title">
+          <div className="menu-hero-content-simple">
+            <h1 className="menu-hero-title-simple">
               Our <span className="title-red">Menu</span>
             </h1>
-            <p className="menu-hero-description">
+            <p className="menu-hero-description-simple">
               Discover our authentic hot pot experience with premium ingredients, 
               signature broths, and fresh selections made daily.
             </p>

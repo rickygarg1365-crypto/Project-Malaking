@@ -7,28 +7,29 @@ import Image from 'next/image'
 export default function AboutPage() {
   return (
     <>
-      {/* Simple Hero Section */}
+      {/* Hero Section - Recreated */}
       <section className="about-hero-simple">
-        <div className="hero-background-simple">
+        <div className="about-hero-background-simple">
           <Image 
             src="/assets/images/Uniform.jpg" 
             alt="About Hero Background"
             fill
             priority={true}
-            quality={85}
+            quality={90}
             sizes="100vw"
-            className="hero-image"
+            className="about-hero-image-simple"
+            style={{ objectFit: 'cover' }}
           />
-          <div className="hero-overlay-simple"></div>
+          <div className="about-hero-overlay-simple"></div>
         </div>
         
         <div className="container">
-          <div className="hero-content-simple">
-            <h1 className="hero-title-simple">
+          <div className="about-hero-content-simple">
+            <h1 className="about-hero-title-simple">
               Surrey's Premier <span className="title-highlight">Hot</span><br />
               <span className="title-highlight">Pot</span> Destination
             </h1>
-            <p className="hero-description-simple">
+            <p className="about-hero-description-simple">
               At Mala King Hot Pot, we bring you an authentic hot pot experience with fresh ingredients, 
               signature broths, and warm hospitality. Discover the perfect blend of tradition and innovation 
               in every bowl we serve.

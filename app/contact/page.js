@@ -30,26 +30,27 @@ export default function ContactPage() {
 
   return (
     <>
-      {/* Modern Contact Hero */}
-      <section className="contact-hero-modern">
-        <div className="hero-bg-contact">
+      {/* Hero Section - Recreated */}
+      <section className="contact-hero-simple">
+        <div className="contact-hero-background-simple">
           <Image 
             src="/assets/images/Seating Area.jpg" 
             alt="Contact Hero Background"
             fill
             priority={true}
-            quality={85}
+            quality={90}
             sizes="100vw"
-            className="hero-image"
+            className="contact-hero-image-simple"
+            style={{ objectFit: 'cover' }}
           />
-          <div className="hero-overlay-contact"></div>
+          <div className="contact-hero-overlay-simple"></div>
         </div>
         <div className="container">
-          <div className="contact-hero-content">
-            <h1 className="contact-hero-title">
+          <div className="contact-hero-content-simple">
+            <h1 className="contact-hero-title-simple">
               Get in <span className="title-red">Touch</span>
             </h1>
-            <p className="contact-hero-description">
+            <p className="contact-hero-description-simple">
               We'd love to hear from you! Whether you have questions, want to make a reservation, 
               or just want to say hello, we're here to help.
             </p>
