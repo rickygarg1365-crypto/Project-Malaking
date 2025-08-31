@@ -15,79 +15,79 @@ export default function MenuPage() {
           name: 'Signature Mala Tang Broth', 
           chineseName: '招牌麻辣烫汤底',
           description: 'Our Signature Broth Is Prepared With Sichuan Peppercorns, Chili, Garlic, And Secret Spices. Topped With Your Ingredients For A Fiery Authentic Experience.',
-          image: '/assets/images/dish1-photo.png',
+          image: '/assets/images/Signature Mala Tang Broth.png',
           spicy: true 
         },
         { 
           name: 'Golden Chicken Broth', 
           chineseName: '金汤鸡汤底',
           description: 'A Rich, Creamy, And Nourishing Broth Infused With Organic Chicken, Offering Deep Savory Flavor And Natural Sweetness Comforting And Nourishing.',
-          image: '/assets/images/dish2-photo.png'
+          image: '/assets/images/Golden Chicken Broth.png'
         },
         { 
           name: 'Tom Yum Broth', 
           chineseName: '冬阴功汤底',
           description: 'A Tangy Thai Broth Bursting With Lemongrass, Lime, And A Touch Of Spice. Perfectly Balanced And Refreshing At Once.',
-          image: '/assets/images/dish3-photo.png',
+          image: '/assets/images/Tom Yum Broth.png',
           spicy: true 
         },
         { 
           name: 'Singapore Laksa Broth', 
           chineseName: '新加坡叻沙汤底',
           description: 'Creamy And Rich Singapore-Style Broth Infused With Coconut Milk, Curry Paste, And Southeast Asian Herbs. A True Comfort Broth With A Tropical Twist.',
-          image: '/assets/images/dish4-photo.png',
+          image: '/assets/images/Singapore Laksa Broth.png',
           spicy: true 
         },
         { 
           name: 'Sacha Broth', 
           chineseName: '沙茶汤底',
           description: 'A Rich And Aromatic Broth Flavored With Soy Garlic, And The Famous Shacha (Satay) Sauce. Smoky, Nutty, And Packed With Umami.',
-          image: '/assets/images/dish1-photo.png'
+          image: '/assets/images/Sacha Broth.png'
         },
         { 
           name: 'Japanese Black Garlic Broth', 
           chineseName: '日式黑蒜汤底',
           description: 'Deep And Earthy With A Hint Of Sweetness, This Rich Garlic Broth Includes Black Garlic, With Savory Japanese Stock For A Smooth, Rich Experience.',
-          image: '/assets/images/dish2-photo.png'
+          image: '/assets/images/Japanese Black Garlic Broth.png'
         },
         { 
           name: 'Japanese Miso Broth', 
           chineseName: '日式味噌汤底',
           description: 'A Comforting Classic Made With Fermented Miso Paste For Rich, Full-Bodied, Balanced Umami With A Mellow Sweetness - Light Yet Satisfying.',
-          image: '/assets/images/dish3-photo.png'
+          image: '/assets/images/Japanese Miso Broth.png'
         },
         { 
           name: 'Fresh Tomato Broth', 
           chineseName: '鲜番茄汤底',
           description: 'Bright And Tangy With Natural Sweetness Harvested From Fresh Ripe Tomatoes. A Light Option That Pairs Beautifully With Seafood And Veggies.',
-          image: '/assets/images/dish4-photo.png'
+          image: '/assets/images/Fresh Tomato Broth.png'
         },
         { 
           name: 'Thai Curry Broth', 
           chineseName: '泰式咖喱汤底',
           description: 'Creamy And Aromatic With A Mix Of Coconut Milk, Red Curry Paste, And Thai Spices. A Warming Embrace Of Sweet, Spicy And Savory.',
-          image: '/assets/images/dish1-photo.png',
+          image: '/assets/images/Thai Curry Broth.png',
           spicy: true 
         },
         { 
           name: 'Spicy Szechuan Dry Mix', 
           chineseName: '四川干拌',
           description: 'Hot & Spicy But A Bold Seasoning Mix Of Szechuan Peppercorns, Chili, Garlic, And Secret Spices. Tossed With Your Ingredients For A Fiery Dry-Style Experience.',
-          image: '/assets/images/dish2-photo.png',
+          image: '/assets/images/Spicy Szechuan Dry Mix.png',
           spicy: true 
         },
         { 
           name: 'Mushroom Vegan Broth', 
           chineseName: '素食菌菇汤底',
           description: 'A Healthy And Flavorful Plant-Based Broth Made From Shiitake, Enoki, And Other Mushrooms. Earthy, Light, And Full Of Umami.',
-          image: '/assets/images/dish3-photo.png',
+          image: '/assets/images/Mushroom Vegan Broth.png',
           vegan: true 
         },
         { 
           name: 'Veggie Broth Ma La Tang', 
           chineseName: '素食麻辣烫汤底',
           description: 'Plant-Based Version Of Our Signature Mala Tang With All The Spice And Flavor, Made With Vegetable Stock And Authentic Sichuan Seasonings.',
-          image: '/assets/images/dish4-photo.png',
+          image: '/assets/images/Veggie Broth Ma La Tang.png',
           vegan: true, 
           spicy: true 
         },
@@ -95,35 +95,35 @@ export default function MenuPage() {
           name: 'Veggie Mixed Mushroom', 
           chineseName: '素食杂菌汤底',
           description: 'A Rich Blend Of Multiple Mushroom Varieties Creating A Deep, Earthy, And Satisfying Plant-Based Broth With Complex Umami Flavors.',
-          image: '/assets/images/dish1-photo.png',
+          image: '/assets/images/Veggie Mixed Mushroom.png',
           vegan: true 
         },
         { 
           name: 'Veggie Broth Black Garlic', 
           chineseName: '素食黑蒜汤底',
           description: 'Plant-Based Black Garlic Broth With The Same Rich, Sweet, And Earthy Flavors As Our Original, Made With Vegetable Stock.',
-          image: '/assets/images/dish2-photo.png',
+          image: '/assets/images/Veggie Broth Black Garlic.png',
           vegan: true 
         },
         { 
           name: 'Veggie Broth - Miso Broth', 
           chineseName: '素食味噌汤底',
           description: 'Traditional Japanese Miso Flavors In A Completely Plant-Based Broth, Light Yet Full Of Satisfying Umami Goodness.',
-          image: '/assets/images/dish3-photo.png',
+          image: '/assets/images/Veggie Broth - Miso Broth.png',
           vegan: true 
         },
         { 
           name: 'Veggie Broth - Sacha Broth', 
           chineseName: '素食沙茶汤底',
           description: 'Plant-Based Version Of Our Popular Sacha Broth, Maintaining All The Nutty, Smoky, And Aromatic Qualities In A Vegan-Friendly Base.',
-          image: '/assets/images/dish4-photo.png',
+          image: '/assets/images/Veggie Broth - Sacha Broth.png',
           vegan: true 
         },
         { 
           name: 'Veggie Broth Thai Curry', 
           chineseName: '素食泰式咖喱汤底',
           description: 'Creamy Coconut-Based Thai Curry Broth With Authentic Spices And Aromatics, Completely Plant-Based But Full Of Traditional Flavors.',
-          image: '/assets/images/dish1-photo.png',
+          image: '/assets/images/Veggie Broth Thai Curry.png',
           vegan: true, 
           spicy: true 
         }
