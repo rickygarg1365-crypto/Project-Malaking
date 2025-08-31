@@ -411,18 +411,17 @@ export default function MenuPage() {
       </section>
 
       {/* Premium Menu Navigation - Redesigned from Scratch */}
-      <section className="menu-navigation-premium">
+      <section className="menu-navigation-section">
         <div className="container">
-          <div className="menu-nav-container-premium">
-            <div className="menu-categories-premium">
+          <div className="menu-nav-wrapper">
+            <div className="menu-categories-nav">
               {categories.map((category) => (
                 <button
                   key={category}
                   onClick={() => setActiveCategory(category)}
-                  className={`menu-nav-button-premium ${activeCategory === category ? 'active' : ''}`}
+                  className={`menu-nav-item ${activeCategory === category ? 'active' : ''}`}
                 >
-                  <span className="nav-button-text">{menuData[category].title}</span>
-                  {activeCategory === category && <div className="active-indicator"></div>}
+                  {menuData[category].title}
                 </button>
               ))}
             </div>

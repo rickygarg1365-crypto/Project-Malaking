@@ -8,33 +8,30 @@ export default function AboutPage() {
   return (
     <>
       {/* Premium Hero Section - Redesigned from Scratch */}
-      <section className="about-hero-premium">
-        <div className="about-hero-background-premium">
-          <Image 
-            src="/assets/images/Uniform.jpg" 
+      <section className="about-hero-simple">
+        <div className="about-hero-background-simple">
+          <Image
+            src="/assets/images/Uniform.jpg"
             alt="About Hero Background"
             fill
             priority={true}
             quality={90}
             sizes="100vw"
-            className="about-hero-image-premium"
+            className="about-hero-image-simple"
             style={{ objectFit: 'cover' }}
           />
-          <div className="about-hero-overlay-premium"></div>
+          <div className="about-hero-overlay-simple"></div>
         </div>
-        
-        <div className="about-hero-content-premium">
-          <div className="hero-content-wrapper">
-            <h1 className="about-hero-title-premium">
-              Surrey's Premier <span className="title-highlight">Hot</span><br />
-              <span className="title-highlight">Pot</span> Destination
-            </h1>
-            <p className="about-hero-description-premium">
-              At Mala King Hot Pot, we bring you an authentic hot pot experience with fresh ingredients, 
-              signature broths, and warm hospitality. Discover the perfect blend of tradition and innovation 
-              in every bowl we serve.
-            </p>
-          </div>
+        <div className="about-hero-content-simple">
+          <h1 className="about-hero-title-simple">
+            Surrey's Premier <span className="title-highlight">Hot</span><br />
+            <span className="title-highlight">Pot</span> Destination
+          </h1>
+          <p className="about-hero-description-simple">
+            At Mala King Hot Pot, we bring you an authentic hot pot experience with fresh ingredients,
+            signature broths, and warm hospitality. Discover the perfect blend of tradition and innovation
+            in every bowl we serve.
+          </p>
         </div>
       </section>
 
