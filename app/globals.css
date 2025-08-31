@@ -11402,11 +11402,11 @@ p {
 
 .about-hero-content-simple {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   text-align: center;
-  padding: 2rem;
   max-width: 800px;
   margin: 0 auto;
+  padding: 2rem;
 }
 
 /* Premium repeating pattern background for menu page content */
@@ -11466,4 +11466,17 @@ p {
   .rewards-hero-description-simple {
     font-size: 1rem;
   }
+}
+
+/* Ensure all hero descriptions are properly aligned */
+.hero-description-simple,
+.menu-hero-description-simple,
+.about-hero-description-simple,
+.locations-hero-description-simple,
+.careers-hero-description-simple,
+.contact-hero-description-simple,
+.rewards-hero-description-simple {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
