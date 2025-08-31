@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import OptimizedImage from '../../components/OptimizedImage'
+
 
 export default function RewardsPage() {
   return (
@@ -10,7 +10,7 @@ export default function RewardsPage() {
         {/* Hero Section */}
         <section className="rewards-hero-modern">
           <div className="hero-bg-rewards">
-            <OptimizedImage 
+            <Image 
               src="/assets/images/Drinks section.jpg" 
               alt="Rewards Hero Background"
               fill

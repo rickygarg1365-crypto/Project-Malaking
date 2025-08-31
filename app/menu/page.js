@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import OptimizedImage from '../../components/OptimizedImage'
+
 
 export default function MenuPage() {
   const [activeCategory, setActiveCategory] = useState('broths')
@@ -385,7 +385,7 @@ export default function MenuPage() {
       {/* Hero Section */}
       <section className="menu-hero-modern">
         <div className="hero-bg-menu">
-          <OptimizedImage
+          <Image
             src="/assets/images/Fresh Ingredients.jpg"
             alt="Menu Hero Background"
             fill
@@ -449,7 +449,7 @@ export default function MenuPage() {
                     {/* Card Header with Image */}
                     <div className="broth-card-header">
                       <div className="broth-image-wrapper">
-                        <OptimizedImage
+                        <Image
                           src={item.image}
                           alt={item.name}
                           width={400}

@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import OptimizedImage from '../../components/OptimizedImage'
+
 import Link from 'next/link'
 
 export default function LocationsPage() {
@@ -8,7 +8,7 @@ export default function LocationsPage() {
       {/* Modern Location Hero */}
       <section className="locations-hero-modern">
         <div className="hero-bg-locations">
-          <OptimizedImage 
+          <Image 
             src="/assets/images/Checkout Area.jpg" 
             alt="Location Hero Background"
             fill

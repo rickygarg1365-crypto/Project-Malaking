@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import OptimizedImage from '../../components/OptimizedImage'
+
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -33,7 +33,7 @@ export default function ContactPage() {
       {/* Modern Contact Hero */}
       <section className="contact-hero-modern">
         <div className="hero-bg-contact">
-          <OptimizedImage 
+          <Image 
             src="/assets/images/Seating Area.jpg" 
             alt="Contact Hero Background"
             fill

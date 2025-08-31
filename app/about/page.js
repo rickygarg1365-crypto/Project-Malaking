@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import OptimizedImage from '../../components/OptimizedImage'
+
 
 export default function AboutPage() {
   return (
@@ -10,7 +10,7 @@ export default function AboutPage() {
       {/* Simple Hero Section */}
       <section className="about-hero-simple">
         <div className="hero-background-simple">
-          <OptimizedImage 
+          <Image 
             src="/assets/images/Uniform.jpg" 
             alt="About Hero Background"
             fill
