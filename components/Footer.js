@@ -13,7 +13,7 @@ export default function Footer() {
             
             {/* Brand Section */}
             <div className="footer-brand-exact">
-              <div className="footer-logo-exact">
+              <Link href="/" className="footer-logo-exact">
                 <Image 
                   src="/assets/images/logo-footer.svg" 
                   alt="Mala King Hot Pot" 
@@ -21,7 +21,7 @@ export default function Footer() {
                   height={120}
                   className="footer-logo-img"
                 />
-              </div>
+              </Link>
               
               <h2 className="footer-brand-title-exact">MALA KING HOTPOT</h2>
               

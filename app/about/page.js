@@ -23,15 +23,17 @@ export default function AboutPage() {
           <div className="about-hero-overlay-simple"></div>
         </div>
         <div className="about-hero-content-simple">
-          <h1 className="about-hero-title-simple">
-            Surrey's Premier <span className="title-highlight">Hot</span><br />
-            <span className="title-highlight">Pot</span> Destination
-          </h1>
-          <p className="about-hero-description-simple">
-            At Mala King Hot Pot, we bring you an authentic hot pot experience with fresh ingredients,
-            signature broths, and warm hospitality. Discover the perfect blend of tradition and innovation
-            in every bowl we serve.
-          </p>
+          <div className="about-hero-text-container">
+            <h1 className="about-hero-title-simple">
+              Surrey's Premier <span className="title-highlight">Hot</span><br />
+              <span className="title-highlight">Pot</span> Destination
+            </h1>
+            <p className="about-hero-description-simple">
+              At Mala King Hot Pot, we bring you an authentic hot pot experience with fresh ingredients,
+              signature broths, and warm hospitality. Discover the perfect blend of tradition and innovation
+              in every bowl we serve.
+            </p>
+          </div>
         </div>
       </section>
 

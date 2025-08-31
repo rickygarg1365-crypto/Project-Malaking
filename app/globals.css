@@ -1067,26 +1067,29 @@ p {
   display: flex;
   gap: var(--spacing-lg);
   z-index: 4;
-  background: #6B7280;
-  padding: var(--spacing-md) var(--spacing-xl);
-  border-radius: 25px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 16px 32px;
+  border-radius: 50px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 .hero-dot {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-  border: 2px solid var(--white);
-  background: #9CA3AF;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.3);
   cursor: pointer;
   transition: all var(--transition-normal);
   position: relative;
 }
 
 .hero-dot.active {
-  background: #9CA3AF;
-  border-color: var(--white);
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2);
 }
 
 .hero-dot.active::after {
@@ -1095,14 +1098,17 @@ p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  background: #374151;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
 }
 
 .hero-dot:hover {
-  background: #6B7280;
+  background: rgba(255, 255, 255, 0.5);
+  border-color: rgba(255, 255, 255, 0.8);
+  transform: scale(1.1);
 }
 
 .hero-arrow {
@@ -3090,16 +3096,11 @@ p {
 
 .footer-logo-exact {
   margin-bottom: 16px;
+  text-decoration: none;
 }
 
 .footer-logo-img {
-  filter: brightness(0) saturate(100%) invert(89%) sepia(14%) saturate(365%) hue-rotate(13deg) brightness(98%) contrast(92%);
-  transition: all var(--transition-normal);
-}
-
-.footer-logo-exact:hover .footer-logo-img {
-  opacity: 0.8;
-  transform: scale(1.05) rotate(5deg);
+  filter: brightness(0) saturate(100%) invert(84%) sepia(11%) saturate(638%) hue-rotate(359deg) brightness(103%) contrast(101%);
 }
 
 .footer-brand-title-exact {
@@ -3548,6 +3549,45 @@ p {
 @keyframes spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+/* ===== UP ARROW BUTTON ===== */
+.up-arrow-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: var(--primary-red);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(179, 46, 29, 0.3);
+}
+
+.up-arrow-button.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.up-arrow-button:hover {
+  background: var(--primary-red-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(179, 46, 29, 0.4);
+}
+
+.up-arrow-button:active {
+  transform: translateY(0);
 }
 
 /* ===== MODERN ABOUT US STYLES ===== */
@@ -6289,7 +6329,7 @@ p {
 
 /* Menu Navigation */
 .menu-navigation-section {
-  background: #ffffff;
+  background: var(--cream);
   padding: var(--spacing-md) 0;
   border-bottom: 1px solid #e5e7eb;
   position: sticky;
@@ -10889,6 +10929,15 @@ p {
   line-height: 1.6;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   color: #ffffff;
+}
+
+.about-hero-text-container {
+  background: transparent;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 /* Responsive styles for about hero */
