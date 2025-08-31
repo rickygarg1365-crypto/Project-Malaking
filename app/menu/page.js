@@ -389,6 +389,9 @@ export default function MenuPage() {
             alt="Menu Hero Background"
             fill
             style={{ objectFit: 'cover' }}
+            priority={true}
+            quality={85}
+            sizes="100vw"
           />
           <div className="hero-overlay-menu"></div>
         </div>

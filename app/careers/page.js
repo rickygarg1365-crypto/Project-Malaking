@@ -57,6 +57,9 @@ export default function CareersPage() {
             alt="Careers Hero Background"
             fill
             style={{ objectFit: 'cover' }}
+            priority={true}
+            quality={85}
+            sizes="100vw"
           />
           <div className="hero-overlay-careers"></div>
         </div>

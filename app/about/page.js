@@ -14,6 +14,9 @@ export default function AboutPage() {
             alt="About Hero Background"
             fill
             style={{ objectFit: 'cover' }}
+            priority={true}
+            quality={85}
+            sizes="100vw"
           />
           <div className="hero-overlay-simple"></div>
         </div>

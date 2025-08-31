@@ -124,6 +124,46 @@ img[data-loading="false"] {
   contain: layout style paint;
 }
 
+/* Hero image loading optimization */
+.hero-background img {
+  transition: opacity 0.3s ease;
+}
+
+.hero-background img[data-loading="true"] {
+  opacity: 0;
+}
+
+.hero-background img[data-loading="false"] {
+  opacity: 1;
+}
+
+/* Hero loading skeleton */
+.hero-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
+  z-index: -1;
+  animation: hero-loading 1.5s ease-in-out infinite;
+}
+
+@keyframes hero-loading {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+/* Hide skeleton when image is loaded */
+.hero-background img[data-loading="false"] + .hero-background::before {
+  display: none;
+}
+
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-body);

@@ -37,6 +37,9 @@ export default function ContactPage() {
             alt="Contact Hero Background"
             fill
             style={{ objectFit: 'cover' }}
+            priority={true}
+            quality={85}
+            sizes="100vw"
           />
           <div className="hero-overlay-contact"></div>
         </div>

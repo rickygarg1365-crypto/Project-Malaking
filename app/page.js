@@ -102,7 +102,9 @@ export default function HomePage() {
                   alt={slide.title}
                   fill
                   style={{ objectFit: 'cover' }}
-                  priority={index === 0}
+                  priority={true}
+                  quality={85}
+                  sizes="100vw"
                 />
                 <div className="hero-overlay"></div>
               </div>

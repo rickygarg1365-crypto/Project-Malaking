@@ -25,6 +25,15 @@ export default function RootLayout({ children }) {
         <link rel="apple-touch-icon" href="/favicon.png" />
         <link rel="shortcut icon" href="/favicon.png" />
         <meta name="msapplication-TileImage" content="/favicon.png" />
+        
+        {/* Preload critical hero images */}
+        <link rel="preload" as="image" href="/assets/images/Grand Opening.jpg" />
+        <link rel="preload" as="image" href="/assets/images/Uniform.jpg" />
+        <link rel="preload" as="image" href="/assets/images/Fresh Ingredients.jpg" />
+        <link rel="preload" as="image" href="/assets/images/Table.jpg" />
+        <link rel="preload" as="image" href="/assets/images/Checkout Area.jpg" />
+        <link rel="preload" as="image" href="/assets/images/Seating Area.jpg" />
+        <link rel="preload" as="image" href="/assets/images/Drinks section.jpg" />
       </head>
       <body className={poppins.className}>
         <Navbar />

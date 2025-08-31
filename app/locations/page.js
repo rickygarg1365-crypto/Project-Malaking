@@ -12,6 +12,9 @@ export default function LocationsPage() {
             alt="Location Hero Background"
             fill
             style={{ objectFit: 'cover' }}
+            priority={true}
+            quality={85}
+            sizes="100vw"
           />
           <div className="hero-overlay-locations"></div>
         </div>
