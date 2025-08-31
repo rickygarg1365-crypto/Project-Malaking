@@ -2623,9 +2623,9 @@ p {
     gap: 24px;
   }
   
-  /* Aggressive tablet landscape header fix for Samsung S9 and OnePlus Tab */
+  /* Ultra Aggressive tablet landscape header fix for Samsung S9 and OnePlus Tab */
   .navbar {
-    padding: 0 6px;
+    padding: 0 2px !important;
     position: fixed;
     top: 0;
     left: 0;
@@ -2635,118 +2635,118 @@ p {
     backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     height: auto;
-    min-height: 60px;
+    min-height: 50px !important;
   }
   
   .nav-container {
-    padding: 4px 0;
+    padding: 2px 0 !important;
     max-width: 100%;
     overflow: hidden;
   }
   
   .nav-content {
-    padding: 0 2px;
-    gap: 6px;
+    padding: 0 1px !important;
+    gap: 3px !important;
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
   }
   
   .nav-actions {
-    gap: 3px;
+    gap: 2px !important;
     flex-shrink: 0;
   }
   
   .nav-action {
-    padding: 4px 6px;
-    font-size: 0.7rem;
+    padding: 2px 4px !important;
+    font-size: 0.6rem !important;
     white-space: nowrap;
-    min-height: 28px;
-    max-width: 80px;
+    min-height: 24px !important;
+    max-width: 70px !important;
     overflow: hidden;
     text-overflow: ellipsis;
   }
   
   .logo-title {
-    font-size: 14px;
+    font-size: 12px !important;
     line-height: 1.1;
   }
   
   .logo-subtitle {
-    font-size: 5px;
+    font-size: 4px !important;
     line-height: 1.1;
   }
   
   .nav-menu {
-    gap: 6px;
-    margin: 0 8px;
+    gap: 4px !important;
+    margin: 0 4px !important;
     flex-shrink: 1;
   }
   
   .nav-link {
-    font-size: 0.75rem;
-    padding: 4px 6px;
+    font-size: 0.65rem !important;
+    padding: 2px 4px !important;
     white-space: nowrap;
   }
   
   .logo-wrapper {
-    gap: 8px;
+    gap: 4px !important;
     flex-shrink: 0;
   }
   
   /* Ensure logo doesn't take too much space */
   .logo {
-    max-width: 40px;
-    max-height: 40px;
+    max-width: 35px !important;
+    max-height: 35px !important;
   }
 }
 
 /* Extra narrow tablet landscape fix */
 @media (max-width: 900px) and (min-width: 769px) and (orientation: landscape) {
   .navbar {
-    padding: 0 4px;
+    padding: 0 1px !important;
   }
   
   .nav-container {
-    padding: 2px 0;
+    padding: 1px 0 !important;
   }
   
   .nav-content {
-    gap: 4px;
+    gap: 2px !important;
   }
   
   .nav-actions {
-    gap: 2px;
+    gap: 1px !important;
   }
   
   .nav-action {
-    padding: 3px 4px;
-    font-size: 0.65rem;
-    min-height: 24px;
-    max-width: 70px;
+    padding: 1px 2px !important;
+    font-size: 0.55rem !important;
+    min-height: 20px !important;
+    max-width: 60px !important;
   }
   
   .logo-title {
-    font-size: 12px;
+    font-size: 10px !important;
   }
   
   .logo-subtitle {
-    font-size: 4px;
+    font-size: 3px !important;
   }
   
   .nav-menu {
-    gap: 4px;
-    margin: 0 4px;
+    gap: 2px !important;
+    margin: 0 2px !important;
   }
   
   .nav-link {
-    font-size: 0.7rem;
-    padding: 3px 4px;
+    font-size: 0.6rem !important;
+    padding: 1px 2px !important;
   }
   
   .logo {
-    max-width: 35px;
-    max-height: 35px;
+    max-width: 30px !important;
+    max-height: 30px !important;
   }
 }
 
@@ -11159,6 +11159,310 @@ p {
     font-size: 2.5rem;
   }
   
+  .rewards-hero-description-simple {
+    font-size: 1rem;
+  }
+}
+
+/* ===== HERO SECTION ENHANCEMENTS ===== */
+
+/* Add dark gradient overlay to all hero sections */
+.hero-overlay-simple {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.3) 100%);
+  z-index: 1;
+}
+
+.menu-hero-overlay-simple {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.3) 100%);
+  z-index: 1;
+}
+
+.about-hero-overlay-simple {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.3) 100%);
+  z-index: 1;
+}
+
+.locations-hero-overlay-simple {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.3) 100%);
+  z-index: 1;
+}
+
+.careers-hero-overlay-simple {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.3) 100%);
+  z-index: 1;
+}
+
+.contact-hero-overlay-simple {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.3) 100%);
+  z-index: 1;
+}
+
+.rewards-hero-overlay-simple {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.3) 100%);
+  z-index: 1;
+}
+
+/* Change hero titles to Permanent Marker font */
+.hero-title-simple {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.menu-hero-title-simple {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.about-hero-title-simple {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.locations-hero-title-simple {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.careers-hero-title-simple {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.contact-hero-title-simple {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.rewards-hero-title-simple {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+/* Change hero descriptions to white */
+.hero-description-simple {
+  font-size: 1.25rem;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.menu-hero-description-simple {
+  font-size: 1.25rem;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.about-hero-description-simple {
+  font-size: 1.25rem;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.locations-hero-description-simple {
+  font-size: 1.25rem;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.careers-hero-description-simple {
+  font-size: 1.25rem;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.contact-hero-description-simple {
+  font-size: 1.25rem;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.rewards-hero-description-simple {
+  font-size: 1.25rem;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* Fix About page hero layout - remove gaps */
+.about-hero-simple {
+  position: relative;
+  height: 80vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.about-hero-background-simple {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.about-hero-image-simple {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-hero-content-simple {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Premium repeating pattern background for menu page content */
+.menu-content-background {
+  background-color: #fdf6e3;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(139, 69, 19, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(160, 82, 45, 0.1) 0%, transparent 50%),
+    linear-gradient(45deg, transparent 40%, rgba(139, 69, 19, 0.05) 40%, rgba(139, 69, 19, 0.05) 60%, transparent 60%),
+    linear-gradient(-45deg, transparent 40%, rgba(160, 82, 45, 0.05) 40%, rgba(160, 82, 45, 0.05) 60%, transparent 60%);
+  background-size: 100px 100px, 150px 150px, 50px 50px, 50px 50px;
+  background-position: 0 0, 50px 50px, 0 0, 25px 25px;
+  min-height: 100vh;
+  padding: 4rem 0;
+}
+
+/* Responsive adjustments for hero titles */
+@media (max-width: 768px) {
+  .hero-title-simple,
+  .menu-hero-title-simple,
+  .about-hero-title-simple,
+  .locations-hero-title-simple,
+  .careers-hero-title-simple,
+  .contact-hero-title-simple,
+  .rewards-hero-title-simple {
+    font-size: 2.5rem;
+  }
+  
+  .hero-description-simple,
+  .menu-hero-description-simple,
+  .about-hero-description-simple,
+  .locations-hero-description-simple,
+  .careers-hero-description-simple,
+  .contact-hero-description-simple,
+  .rewards-hero-description-simple {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title-simple,
+  .menu-hero-title-simple,
+  .about-hero-title-simple,
+  .locations-hero-title-simple,
+  .careers-hero-title-simple,
+  .contact-hero-title-simple,
+  .rewards-hero-title-simple {
+    font-size: 2rem;
+  }
+  
+  .hero-description-simple,
+  .menu-hero-description-simple,
+  .about-hero-description-simple,
+  .locations-hero-description-simple,
+  .careers-hero-description-simple,
+  .contact-hero-description-simple,
   .rewards-hero-description-simple {
     font-size: 1rem;
   }

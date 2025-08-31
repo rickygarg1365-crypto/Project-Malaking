@@ -430,7 +430,7 @@ export default function MenuPage() {
       </section>
 
       {/* Menu Content */}
-      <section className="menu-content-section">
+      <section className="menu-content-section menu-content-background">
         <div className="container">
           <div className="menu-category-header">
             <h2 className="category-title">{menuData[activeCategory].title}</h2>
