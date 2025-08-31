@@ -60,6 +60,9 @@ export default function Navbar() {
               <Link href="/menu" className={`nav-link ${pathname === '/menu' ? 'active' : ''}`}>
                 Menu
               </Link>
+              <Link href="/order" className={`nav-link ${pathname === '/order' ? 'active' : ''}`}>
+                Order
+              </Link>
               <Link href="/locations" className={`nav-link ${pathname === '/locations' ? 'active' : ''}`}>
                 Locations
               </Link>
@@ -76,7 +79,7 @@ export default function Navbar() {
               <Link href="/rewards" className="nav-action rewards">
                 <span>Rewards</span>
               </Link>
-              <Link href="/menu" className="nav-action order">
+              <Link href="/order" className="nav-action order">
                 <span>Order Now</span>
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                   <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -129,6 +132,9 @@ export default function Navbar() {
               <Link href="/menu" className={`mobile-link ${pathname === '/menu' ? 'active' : ''}`} onClick={closeMobileMenu}>
                 Menu
               </Link>
+              <Link href="/order" className={`mobile-link ${pathname === '/order' ? 'active' : ''}`} onClick={closeMobileMenu}>
+                Order
+              </Link>
               <Link href="/locations" className={`mobile-link ${pathname === '/locations' ? 'active' : ''}`} onClick={closeMobileMenu}>
                 Locations
               </Link>
@@ -150,7 +156,7 @@ export default function Navbar() {
                 </svg>
                 <span>Join Rewards Program</span>
               </Link>
-              <Link href="/menu" className="mobile-action order" onClick={closeMobileMenu}>
+              <Link href="/order" className="mobile-action order" onClick={closeMobileMenu}>
                 <span>Order Now</span>
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                   <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
