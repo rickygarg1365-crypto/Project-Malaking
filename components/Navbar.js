@@ -8,6 +8,7 @@ import { usePathname } from 'next/navigation'
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isOrderPopupOpen, setIsOrderPopupOpen] = useState(false)
   const pathname = usePathname()
 
   useEffect(() => {
@@ -26,6 +27,52 @@ export default function Navbar() {
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false)
   }
+
+  const openOrderPopup = () => {
+    setIsOrderPopupOpen(true)
+    setIsMobileMenuOpen(false)
+  }
+
+  const closeOrderPopup = () => {
+    setIsOrderPopupOpen(false)
+  }
+
+  const deliveryApps = [
+    {
+      name: 'DoorDash',
+      description: 'Fast delivery with real-time tracking',
+      estimatedTime: '25-35 min',
+      deliveryFee: '$2.99',
+      url: '#',
+      color: '#FF3008',
+      popular: true
+    },
+    {
+      name: 'Uber Eats',
+      description: 'Quick and reliable delivery service',
+      estimatedTime: '20-30 min',
+      deliveryFee: '$3.49',
+      url: '#',
+      color: '#00B14F'
+    },
+    {
+      name: 'Skip The Dishes',
+      description: 'Canada\'s favorite delivery app',
+      estimatedTime: '30-40 min', 
+      deliveryFee: '$2.49',
+      url: '#',
+      color: '#E8002A',
+      popular: true
+    },
+    {
+      name: 'Fantuan',
+      description: 'Authentic Asian food delivery',
+      estimatedTime: '25-35 min',
+      deliveryFee: '$2.99',
+      url: '#',
+      color: '#FF6B35'
+    }
+  ]
 
   return (
     <header className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
@@ -60,9 +107,6 @@ export default function Navbar() {
               <Link href="/menu" className={`nav-link ${pathname === '/menu' ? 'active' : ''}`}>
                 Menu
               </Link>
-              <Link href="/order" className={`nav-link ${pathname === '/order' ? 'active' : ''}`}>
-                Order
-              </Link>
               <Link href="/locations" className={`nav-link ${pathname === '/locations' ? 'active' : ''}`}>
                 Locations
               </Link>
@@ -79,12 +123,12 @@ export default function Navbar() {
               <Link href="/rewards" className="nav-action rewards">
                 <span>Rewards</span>
               </Link>
-              <Link href="/order" className="nav-action order">
+              <button onClick={openOrderPopup} className="nav-action order">
                 <span>Order Now</span>
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                   <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
-              </Link>
+              </button>
             </div>
 
             {/* Mobile Menu Button */}
@@ -132,9 +176,6 @@ export default function Navbar() {
               <Link href="/menu" className={`mobile-link ${pathname === '/menu' ? 'active' : ''}`} onClick={closeMobileMenu}>
                 Menu
               </Link>
-              <Link href="/order" className={`mobile-link ${pathname === '/order' ? 'active' : ''}`} onClick={closeMobileMenu}>
-                Order
-              </Link>
               <Link href="/locations" className={`mobile-link ${pathname === '/locations' ? 'active' : ''}`} onClick={closeMobileMenu}>
                 Locations
               </Link>
@@ -156,16 +197,88 @@ export default function Navbar() {
                 </svg>
                 <span>Join Rewards Program</span>
               </Link>
-              <Link href="/order" className="mobile-action order" onClick={closeMobileMenu}>
+              <button onClick={openOrderPopup} className="mobile-action order">
                 <span>Order Now</span>
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                   <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
-              </Link>
+              </button>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Order Popup Modal */}
+      {isOrderPopupOpen && (
+        <div className="order-popup-overlay" onClick={closeOrderPopup}>
+          <div className="order-popup-modal" onClick={(e) => e.stopPropagation()}>
+            <div className="popup-header">
+              <h2 className="popup-title">Order Delivery</h2>
+              <p className="popup-subtitle">Choose your preferred delivery app</p>
+              <button className="popup-close" onClick={closeOrderPopup}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </button>
+            </div>
+            
+            <div className="popup-content">
+              <div className="delivery-apps-popup-grid">
+                {deliveryApps.map((app, index) => (
+                  <a
+                    key={index}
+                    href={app.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`delivery-app-popup-card ${app.popular ? 'popular-app' : ''}`}
+                    onClick={closeOrderPopup}
+                  >
+                    {app.popular && (
+                      <div className="popular-badge-popup">
+                        <span>⭐</span>
+                        <span>Popular</span>
+                      </div>
+                    )}
+                    
+                    <div className="app-logo-popup" style={{ backgroundColor: app.color }}>
+                      <span className="app-initial">{app.name.charAt(0)}</span>
+                    </div>
+                    
+                    <div className="app-info-popup">
+                      <h3 className="app-name-popup">{app.name}</h3>
+                      <p className="app-description-popup">{app.description}</p>
+                      
+                      <div className="app-details-popup">
+                        <div className="app-detail-popup">
+                          <span className="detail-icon-popup">⏱️</span>
+                          <span>{app.estimatedTime}</span>
+                        </div>
+                        <div className="app-detail-popup">
+                          <span className="detail-icon-popup">💰</span>
+                          <span>{app.deliveryFee}</span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="order-arrow-popup">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </div>
+                  </a>
+                ))}
+              </div>
+              
+              <div className="popup-footer">
+                <p className="popup-note">
+                  <span>🍲</span>
+                  All apps offer our complete menu with fresh ingredients and signature broths
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </header>
   )
 }
