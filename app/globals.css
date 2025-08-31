@@ -291,6 +291,133 @@ body {
   transition: opacity 0.3s ease-in, transform 0.3s ease-in;
 }
 
+/* PWA Install Prompt */
+.pwa-install-prompt {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  z-index: 10000;
+  animation: slideUp 0.3s ease-out;
+}
+
+.pwa-install-content {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.pwa-install-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.pwa-install-text {
+  flex: 1;
+}
+
+.pwa-install-text h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--black);
+}
+
+.pwa-install-text p {
+  font-size: 0.9rem;
+  color: var(--gray-600);
+  margin: 0;
+}
+
+.pwa-install-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.pwa-install-btn {
+  background: var(--primary-red);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pwa-install-btn:hover {
+  background: var(--primary-red-dark);
+  transform: translateY(-1px);
+}
+
+.pwa-dismiss-btn {
+  background: transparent;
+  color: var(--gray-600);
+  border: 1px solid var(--gray-300);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pwa-dismiss-btn:hover {
+  background: var(--gray-100);
+  color: var(--black);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .pwa-install-prompt {
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+  }
+  
+  .pwa-install-content {
+    padding: 16px;
+    gap: 12px;
+  }
+  
+  .pwa-install-text h3 {
+    font-size: 1rem;
+  }
+  
+  .pwa-install-text p {
+    font-size: 0.8rem;
+  }
+  
+  .pwa-install-actions {
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .pwa-install-btn,
+  .pwa-dismiss-btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}
+
 /* Enhanced Image Loading Optimization */
 img {
   transition: opacity 0.3s ease;

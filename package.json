@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "deploy": "node deploy.js",
-    "deploy:vercel": "vercel --prod"
+    "deploy:vercel": "vercel --prod",
+    "pwa-icons": "node scripts/generate-pwa-icons.js"
   },
   "dependencies": {
     "next": "^14.2.32",

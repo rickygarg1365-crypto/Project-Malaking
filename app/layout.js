@@ -3,6 +3,7 @@ import { Poppins } from 'next/font/google'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import LoadingProvider from '../components/LoadingProvider'
+import PWARegistration from '../components/PWARegistration'
 
 const poppins = Poppins({ 
   subsets: ['latin'],
@@ -21,11 +22,43 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+        <!-- PWA Manifest -->
+        <link rel="manifest" href="/manifest.json" />
+        
+        <!-- Favicon and App Icons -->
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png" />
-        <link rel="apple-touch-icon" href="/favicon.png" />
+        <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
         <link rel="shortcut icon" href="/favicon.png" />
-        <meta name="msapplication-TileImage" content="/favicon.png" />
+        <meta name="msapplication-TileImage" content="/icons/icon-192x192.png" />
+        <meta name="msapplication-TileColor" content="#B32E1D" />
+        
+        <!-- PWA Meta Tags -->
+        <meta name="application-name" content="Mala King Hot Pot" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="Mala King" />
+        <meta name="description" content="Discover Surrey's newest and most exciting hot pot destination! Authentic hot pot experience with premium ingredients and signature broths." />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="msapplication-config" content="/browserconfig.xml" />
+        <meta name="msapplication-TileColor" content="#B32E1D" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="theme-color" content="#B32E1D" />
+        
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://malakinghotpot.ca/" />
+        <meta property="og:title" content="Mala King Hot Pot - Weigh to Pay, Made Your Way" />
+        <meta property="og:description" content="Discover Surrey's newest and most exciting hot pot destination! Authentic hot pot experience with premium ingredients and signature broths." />
+        <meta property="og:image" content="/icons/icon-512x512.png" />
+        
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://malakinghotpot.ca/" />
+        <meta property="twitter:title" content="Mala King Hot Pot - Weigh to Pay, Made Your Way" />
+        <meta property="twitter:description" content="Discover Surrey's newest and most exciting hot pot destination! Authentic hot pot experience with premium ingredients and signature broths." />
+        <meta property="twitter:image" content="/icons/icon-512x512.png" />
         
         {/* DNS prefetch for faster connections */}
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
@@ -49,6 +82,7 @@ export default function RootLayout({ children }) {
             {children}
           </main>
           <Footer />
+          <PWARegistration />
         </LoadingProvider>
       </body>
     </html>
