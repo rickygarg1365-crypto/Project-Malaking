@@ -183,143 +183,161 @@ export default function MenuPage() {
     meatballs: {
       title: 'Meatballs & Seafood Balls',
       subtitle: 'Fresh handmade balls and seafood selections',
+      weighToPay: true,
+      pricePerWeight: 3.69,
+      weightUnit: '100g',
       items: [
-        { name: 'Beef Ball (2 PC)', price: 1.99 },
-        { name: 'Mushroom Pork Ball (2 PC)', price: 1.99 },
-        { name: 'Cuttlefish (2 PC)', price: 2.49 },
-        { name: 'Chicken Ball (2 PC)', price: 1.99 },
-        { name: 'Lobster Ball (3 PC)', price: 1.99 },
-        { name: 'Imitation Snow Crab Leg (5 PC)', price: 2.49 },
-        { name: 'Crab (Half)', price: 3.99 },
-        { name: 'Scallop (10 PC)', price: 1.99 },
-        { name: 'Mini Sausage (5 PC)', price: 1.99 },
-        { name: 'Squid Ring (3 PC)', price: 2.49 },
-        { name: 'Pork Ball (2 PC)', price: 1.99 },
-        { name: 'Creamy Lobster Ball (2 PC)', price: 1.99 },
-        { name: 'Fuzhou Fish Ball (2 PC)', price: 1.99 },
-        { name: 'Squid Roll (3 PC)', price: 2.49 },
-        { name: 'Octopus Fish Ball (1 PC)', price: 1.99 },
-        { name: 'Whole Shrimp Egg Dumpling (3 PC)', price: 2.49 },
-        { name: 'Fish Tofu (3 PC)', price: 1.99 },
-        { name: 'Taro Fish Ball (2 PC)', price: 1.99 },
-        { name: 'Grilled Fish Roll (3 PC)', price: 1.99 },
-        { name: 'Fish Ball with Cheese (2 PC)', price: 1.99 },
-        { name: 'Mini Octopus (2 PC)', price: 2.49 },
-        { name: 'Salted Egg Lava Fish Ball (2 PC)', price: 1.99 },
-        { name: 'Mochi (2 PC)', price: 1.99 },
-        { name: 'Fortune Bag (2 PC)', price: 2.49 },
-        { name: 'Mussels (2 PC)', price: 2.49 },
-        { name: 'White Fish Ball (3 PC)', price: 1.99 },
-        { name: 'Snakehead Fish Slice (5 PC)', price: 2.49 },
-        { name: 'Basa Fish Fillet (3 PC)', price: 3.99 },
-        { name: 'Abalone (Each)', price: 3.99 }
+        { name: 'Beef Ball', chineseName: '牛肉丸' },
+        { name: 'Mushroom Pork Ball', chineseName: '香菇猪肉丸' },
+        { name: 'Cuttlefish', chineseName: '墨鱼' },
+        { name: 'Chicken Ball', chineseName: '鸡肉丸' },
+        { name: 'Lobster Ball', chineseName: '龙虾丸' },
+        { name: 'Imitation Snow Crab Leg', chineseName: '仿雪蟹腿' },
+        { name: 'Crab', chineseName: '螃蟹' },
+        { name: 'Scallop', chineseName: '扇贝' },
+        { name: 'Mini Sausage', chineseName: '迷你香肠' },
+        { name: 'Squid Ring', chineseName: '鱿鱼圈' },
+        { name: 'Pork Ball', chineseName: '猪肉丸' },
+        { name: 'Creamy Lobster Ball', chineseName: '奶油龙虾丸' },
+        { name: 'Fuzhou Fish Ball', chineseName: '福州鱼丸' },
+        { name: 'Squid Roll', chineseName: '鱿鱼卷' },
+        { name: 'Octopus Fish Ball', chineseName: '章鱼鱼丸' },
+        { name: 'Whole Shrimp Egg Dumpling', chineseName: '整虾蛋饺' },
+        { name: 'Fish Tofu', chineseName: '鱼豆腐' },
+        { name: 'Taro Fish Ball', chineseName: '芋头鱼丸' },
+        { name: 'Grilled Fish Roll', chineseName: '烤鱼卷' },
+        { name: 'Fish Ball with Cheese', chineseName: '芝士鱼丸' },
+        { name: 'Mini Octopus', chineseName: '小章鱼' },
+        { name: 'Salted Egg Lava Fish Ball', chineseName: '咸蛋黄流心鱼丸' },
+        { name: 'Mochi', chineseName: '麻薯' },
+        { name: 'Fortune Bag', chineseName: '福袋' },
+        { name: 'Mussels', chineseName: '青口贝' },
+        { name: 'White Fish Ball', chineseName: '白鱼丸' },
+        { name: 'Snakehead Fish Slice', chineseName: '黑鱼片' },
+        { name: 'Basa Fish Fillet', chineseName: '巴沙鱼片' },
+        { name: 'Abalone', chineseName: '鲍鱼' }
       ]
     },
     meats: {
       title: 'Meats',
       subtitle: 'Premium cuts and specialty meat selections',
+      weighToPay: true,
+      pricePerWeight: 3.69,
+      weightUnit: '100g',
       items: [
-        { name: 'Deluxe Lamb Roll (100 g)', price: 4.19 },
-        { name: 'Beef Tripe (50 g)', price: 2.49 },
-        { name: 'Garlic Sausage (5 PC)', price: 2.49 },
-        { name: 'House Special Chicken (100 g)', price: 4.19 },
-        { name: 'Premium Pork Shoulder (100 g)', price: 4.19 },
-        { name: 'Beef Artery (50 g)', price: 2.49 },
-        { name: 'Mini Smoky Sausage (3 PC)', price: 2.49 },
-        { name: 'Black Pepper Duck Breast (3 PC)', price: 2.49 },
-        { name: 'Luncheon Pork (2 PC)', price: 2.49 },
-        { name: 'Premium Pork Belly (100 g)', price: 4.19 },
-        { name: 'Quail Egg (6 PC)', price: 2.49 },
-        { name: 'Deluxe Beef Roll (100 g)', price: 4.19 },
-        { name: 'Peeled Shrimp (4 PC)', price: 4.19 }
+        { name: 'Deluxe Lamb Roll', chineseName: '精品羊肉卷' },
+        { name: 'Beef Tripe', chineseName: '牛肚' },
+        { name: 'Garlic Sausage', chineseName: '蒜味香肠' },
+        { name: 'House Special Chicken', chineseName: '招牌鸡肉' },
+        { name: 'Premium Pork Shoulder', chineseName: '精品猪肩肉' },
+        { name: 'Beef Artery', chineseName: '牛动脉' },
+        { name: 'Mini Smoky Sausage', chineseName: '迷你烟熏香肠' },
+        { name: 'Black Pepper Duck Breast', chineseName: '黑胡椒鸭胸' },
+        { name: 'Luncheon Pork', chineseName: '午餐肉' },
+        { name: 'Premium Pork Belly', chineseName: '精品五花肉' },
+        { name: 'Quail Egg', chineseName: '鹌鹑蛋' },
+        { name: 'Deluxe Beef Roll', chineseName: '精品牛肉卷' },
+        { name: 'Peeled Shrimp', chineseName: '去壳虾' }
       ]
     },
     vegetables: {
       title: 'Vegetables',
       subtitle: 'Fresh vegetables and plant-based options',
+      weighToPay: true,
+      pricePerWeight: 3.69,
+      weightUnit: '100g',
       items: [
-        { name: 'Crown Daisy (50 g)', price: 1.99 },
-        { name: 'Mushroom (7 PC)', price: 2.49 },
-        { name: 'Broccoli (3 PC)', price: 1.99 },
-        { name: 'Lotus Root (2 PC)', price: 1.99 },
-        { name: 'Spinach (50 g)', price: 1.99 },
-        { name: 'Oyster Mushroom (5 PC)', price: 2.49 },
-        { name: 'Cauliflower (3 PC)', price: 1.99 },
-        { name: 'Potato (4 PC)', price: 1.99 },
-        { name: 'Seafood Mushroom (8 PC)', price: 2.49 },
-        { name: 'Winter Melon (3 PC)', price: 1.99 },
-        { name: 'Konjac Vegan Tripe (3 PC)', price: 1.99 },
-        { name: 'Lettuce (50 g)', price: 1.99 },
-        { name: 'Enoki Mushroom (50 g)', price: 2.49 },
-        { name: 'Baby Corn (5 PC)', price: 2.49 },
-        { name: 'Kelp Sprouts (50 g)', price: 2.49 },
-        { name: 'Shanghai Bok Choy (50 g)', price: 1.99 },
-        { name: 'Fried Egg (1 PC)', price: 2.99 },
-        { name: 'Wood Ear Mushroom (5 PC)', price: 2.49 },
-        { name: 'Tamago (2 PC)', price: 2.49 },
-        { name: 'Fresh Tofu Skin (50 g)', price: 1.99 },
-        { name: 'Napa Cabbage (50 g)', price: 1.99 },
-        { name: 'Dried Orchid (1 PC)', price: 1.99 },
-        { name: 'Fresh Bean Curd (3 PC)', price: 2.49 },
-        { name: 'Frozen Tofu (3 PC)', price: 2.49 },
-        { name: 'Edamame (100 g)', price: 3.99 },
-        { name: 'Fresh Tofu (50 g)', price: 1.99 },
-        { name: 'Konjac Knot (5 PC)', price: 1.99 },
-        { name: 'Cabbage (50 g)', price: 1.99 },
-        { name: 'Bean Sprout (50 g)', price: 1.99 },
-        { name: 'Chinese Doughnut (2 PC)', price: 2.49 },
-        { name: 'Small Crab Stick (3 PC)', price: 2.49 }
+        { name: 'Crown Daisy', chineseName: '茼蒿' },
+        { name: 'Mushroom', chineseName: '蘑菇' },
+        { name: 'Broccoli', chineseName: '西兰花' },
+        { name: 'Lotus Root', chineseName: '莲藕' },
+        { name: 'Spinach', chineseName: '菠菜' },
+        { name: 'Oyster Mushroom', chineseName: '平菇' },
+        { name: 'Cauliflower', chineseName: '花椰菜' },
+        { name: 'Potato', chineseName: '土豆' },
+        { name: 'Seafood Mushroom', chineseName: '海鲜菇' },
+        { name: 'Winter Melon', chineseName: '冬瓜' },
+        { name: 'Konjac Vegan Tripe', chineseName: '魔芋素肚' },
+        { name: 'Lettuce', chineseName: '生菜' },
+        { name: 'Enoki Mushroom', chineseName: '金针菇' },
+        { name: 'Baby Corn', chineseName: '玉米笋' },
+        { name: 'Kelp Sprouts', chineseName: '海带芽' },
+        { name: 'Shanghai Bok Choy', chineseName: '上海青' },
+        { name: 'Fried Egg', chineseName: '煎蛋' },
+        { name: 'Wood Ear Mushroom', chineseName: '木耳' },
+        { name: 'Tamago', chineseName: '日式蛋' },
+        { name: 'Fresh Tofu Skin', chineseName: '鲜腐皮' },
+        { name: 'Napa Cabbage', chineseName: '大白菜' },
+        { name: 'Dried Orchid', chineseName: '干兰花' },
+        { name: 'Fresh Bean Curd', chineseName: '鲜豆腐' },
+        { name: 'Frozen Tofu', chineseName: '冻豆腐' },
+        { name: 'Edamame', chineseName: '毛豆' },
+        { name: 'Fresh Tofu', chineseName: '嫩豆腐' },
+        { name: 'Konjac Knot', chineseName: '魔芋结' },
+        { name: 'Cabbage', chineseName: '卷心菜' },
+        { name: 'Bean Sprout', chineseName: '豆芽' },
+        { name: 'Chinese Doughnut', chineseName: '油条' },
+        { name: 'Small Crab Stick', chineseName: '小蟹棒' }
       ]
     },
     noodles: {
       title: 'Noodles & Rice',
       subtitle: 'Noodles, rice and carb options',
+      weighToPay: true,
+      pricePerWeight: 3.69,
+      weightUnit: '100g',
       items: [
-        { name: 'Rice', price: 2.50 },
-        { name: 'Egg Noodle (1 PC)', price: 3.99 },
-        { name: 'Purple Yam Noodle (1 PC)', price: 3.99 },
-        { name: 'Instant Noodle (1 PC)', price: 3.99 },
-        { name: 'Spinach Noodle (1 PC)', price: 3.99 },
-        { name: 'Hand Crafted Noodle (1 PC)', price: 3.99 },
-        { name: 'Mung Bean Noodle (9 PC)', price: 3.99 },
-        { name: 'Vermicelli (1 PC)', price: 2.99 },
-        { name: 'Udon (1 PC)', price: 3.99 },
-        { name: 'Sliced Rice Cake (4 PC)', price: 1.99 },
-        { name: 'Ramen (1 PC)', price: 4.99 },
-        { name: 'Rice Vermicelli (100 g)', price: 3.99 },
-        { name: 'Carb substitute - Napa Cabbage (100 g)', price: 3.99 }
+        { name: 'Rice', chineseName: '米饭' },
+        { name: 'Egg Noodle', chineseName: '鸡蛋面' },
+        { name: 'Purple Yam Noodle', chineseName: '紫薯面' },
+        { name: 'Instant Noodle', chineseName: '方便面' },
+        { name: 'Spinach Noodle', chineseName: '菠菜面' },
+        { name: 'Hand Crafted Noodle', chineseName: '手工面' },
+        { name: 'Mung Bean Noodle', chineseName: '绿豆粉丝' },
+        { name: 'Vermicelli', chineseName: '粉丝' },
+        { name: 'Udon', chineseName: '乌冬面' },
+        { name: 'Sliced Rice Cake', chineseName: '年糕片' },
+        { name: 'Ramen', chineseName: '拉面' },
+        { name: 'Rice Vermicelli', chineseName: '米粉' },
+        { name: 'Carb Substitute - Napa Cabbage', chineseName: '低卡替代-大白菜' }
       ]
     },
     sauces: {
       title: 'Sauces & Condiments',
       subtitle: 'Enhance your hot pot experience',
+      weighToPay: true,
+      pricePerWeight: 3.69,
+      weightUnit: '100g',
       items: [
-        { name: 'Chili Oil', price: 2.50 },
-        { name: 'Chili', price: 2.50 },
-        { name: 'Black Vinegar', price: 2.50 },
-        { name: 'Sesame Oil', price: 2.50 },
-        { name: 'BBQ Sauce (Sacha Sauce)', price: 2.50 },
-        { name: 'Sesame Peanut Paste', price: 2.50 },
-        { name: 'Chili Garlic Sauce', price: 2.50 },
-        { name: 'Siracha', price: 2.50 },
-        { name: 'Cilantro', price: 2.50 },
-        { name: 'Green Onion', price: 2.50 },
-        { name: 'Garlic', price: 2.50 },
-        { name: 'Oyster Sauce', price: 2.50 }
+        { name: 'Chili Oil', chineseName: '辣椒油' },
+        { name: 'Chili', chineseName: '辣椒' },
+        { name: 'Black Vinegar', chineseName: '黑醋' },
+        { name: 'Sesame Oil', chineseName: '香油' },
+        { name: 'BBQ Sauce (Sacha Sauce)', chineseName: '沙茶酱' },
+        { name: 'Sesame Peanut Paste', chineseName: '芝麻花生酱' },
+        { name: 'Chili Garlic Sauce', chineseName: '蒜蓉辣椒酱' },
+        { name: 'Sriracha', chineseName: '是拉差酱' },
+        { name: 'Cilantro', chineseName: '香菜' },
+        { name: 'Green Onion', chineseName: '葱花' },
+        { name: 'Garlic', chineseName: '蒜' },
+        { name: 'Oyster Sauce', chineseName: '蚝油' }
       ]
     },
     others: {
       title: 'Other Add-Ons',
       subtitle: 'Additional items and special add-ons',
+      weighToPay: true,
+      pricePerWeight: 3.69,
+      weightUnit: '100g',
       items: [
-        { name: 'Butter', price: 1.99 },
-        { name: 'Abalone (2 PC)', price: 7.98 },
-        { name: 'Japanese Chicken Karaage', price: 5.99 },
-        { name: 'Chicken Skewer', price: 3.99 },
-        { name: 'Beef Skewer', price: 4.99 },
-        { name: 'Shrimp Skewer', price: 4.99 },
-        { name: 'Pork Belly Skewer', price: 4.99 },
-        { name: 'Spiral Potato', price: 3.99 }
+        { name: 'Butter', chineseName: '黄油' },
+        { name: 'Premium Abalone', chineseName: '精品鲍鱼' },
+        { name: 'Japanese Chicken Karaage', chineseName: '日式炸鸡' },
+        { name: 'Chicken Skewer', chineseName: '鸡肉串' },
+        { name: 'Beef Skewer', chineseName: '牛肉串' },
+        { name: 'Shrimp Skewer', chineseName: '虾串' },
+        { name: 'Pork Belly Skewer', chineseName: '五花肉串' },
+        { name: 'Spiral Potato', chineseName: '螺旋土豆' }
       ]
     }
   }
@@ -405,26 +423,10 @@ export default function MenuPage() {
           {/* Redesigned Broths Section */}
           {activeCategory === 'broths' ? (
             <div className="broths-redesigned-container">
-              {/* Filter Tabs */}
-              <div className="broth-filter-tabs">
-                <button className="filter-tab active" data-filter="all">
-                  <span className="tab-icon">🍲</span>
-                  <span className="tab-text">All Broths</span>
-                </button>
-                <button className="filter-tab" data-filter="regular">
-                  <span className="tab-icon">🔥</span>
-                  <span className="tab-text">Signature</span>
-                </button>
-                <button className="filter-tab" data-filter="vegan">
-                  <span className="tab-icon">🌱</span>
-                  <span className="tab-text">Plant-Based</span>
-                </button>
-              </div>
-
               {/* Broths Grid */}
-              <div className="broths-masonry-grid">
+              <div className="broths-clean-grid">
                 {menuData[activeCategory].items.map((item, index) => (
-                  <div key={index} className={`broth-card-redesigned ${item.vegan ? 'vegan-broth' : 'regular-broth'} ${item.spicy ? 'spicy-broth' : ''}`}>
+                  <div key={index} className="broth-card-clean">
                     {/* Card Header with Image */}
                     <div className="broth-card-header">
                       <div className="broth-image-wrapper">
@@ -435,25 +437,6 @@ export default function MenuPage() {
                           height={280}
                           className="broth-image-redesigned"
                         />
-                        <div className="image-overlay">
-                          <div className="broth-badges-redesigned">
-                            {item.spicy && (
-                              <div className="badge spicy-badge-new">
-                                <span className="badge-icon">🌶️</span>
-                                <span className="badge-text">Spicy</span>
-                              </div>
-                            )}
-                            {item.vegan && (
-                              <div className="badge vegan-badge-new">
-                                <span className="badge-icon">🌱</span>
-                                <span className="badge-text">Plant-Based</span>
-                              </div>
-                            )}
-                          </div>
-                          <div className="broth-number-redesigned">
-                            {String(index + 1).padStart(2, '0')}
-                          </div>
-                        </div>
                       </div>
                     </div>
 
@@ -467,23 +450,6 @@ export default function MenuPage() {
                       <div className="broth-description-section">
                         <p className="broth-description-redesigned">{item.description}</p>
                       </div>
-
-                      <div className="broth-flavor-profile">
-                        <div className="flavor-indicators">
-                          {item.spicy && <div className="flavor-dot spicy-dot"></div>}
-                          {item.name.toLowerCase().includes('chicken') && <div className="flavor-dot protein-dot"></div>}
-                          {item.name.toLowerCase().includes('tomato') && <div className="flavor-dot fresh-dot"></div>}
-                          {item.name.toLowerCase().includes('miso') && <div className="flavor-dot umami-dot"></div>}
-                          {item.name.toLowerCase().includes('curry') && <div className="flavor-dot aromatic-dot"></div>}
-                          {item.vegan && <div className="flavor-dot vegan-dot"></div>}
-                        </div>
-                        <div className="try-now-button">
-                          <span>Try This Broth</span>
-                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                          </svg>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 ))}
@@ -493,7 +459,6 @@ export default function MenuPage() {
               <div className="featured-broth-spotlight">
                 <div className="spotlight-content">
                   <div className="spotlight-badge">
-                    <span>🏆</span>
                     <span>Customer Favorite</span>
                   </div>
                   <h3>Signature Mala Tang Broth</h3>
@@ -516,26 +481,45 @@ export default function MenuPage() {
             </div>
           ) : (
             /* Regular Menu Items Grid */
-            <div className="menu-items-grid">
-              {menuData[activeCategory].items.map((item, index) => (
-                <div key={index} className="menu-item-card">
-                  <div className="menu-item-header">
-                    <h3 className="menu-item-name">
-                      {item.name}
-                      {item.popular && <span className="popular-badge">Most Favorite</span>}
-                      {item.spicy && <span className="spicy-badge">🌶️</span>}
-                      {item.vegan && <span className="vegan-badge">🌱</span>}
-                    </h3>
-                    {item.price && <span className="menu-item-price">${item.price}</span>}
+            <div className="menu-section">
+              {/* Pricing Header for Weigh-to-Pay Sections */}
+              {menuData[activeCategory].weighToPay && (
+                <div className="weigh-to-pay-header">
+                  <div className="pricing-badge">
+                    <span className="price-amount">${menuData[activeCategory].pricePerWeight}</span>
+                    <span className="price-unit">per {menuData[activeCategory].weightUnit}</span>
                   </div>
-                  {item.description && (
-                    <p className="menu-item-description">{item.description}</p>
-                  )}
-                  {item.category && (
-                    <span className="menu-item-category">{item.category}</span>
-                  )}
+                  <p className="pricing-description">
+                    All items in this section are priced by weight. Simply select what you want and we'll weigh it for you!
+                  </p>
                 </div>
-              ))}
+              )}
+              
+              {/* Items Grid */}
+              <div className="ingredients-grid">
+                {menuData[activeCategory].items.map((item, index) => (
+                  <div key={index} className={`ingredient-card ${menuData[activeCategory].weighToPay ? 'weigh-to-pay' : 'regular-item'}`}>
+                    <div className="ingredient-content">
+                      <h3 className="ingredient-name-english">{item.name}</h3>
+                      {item.chineseName && (
+                        <p className="ingredient-name-chinese">{item.chineseName}</p>
+                      )}
+                      
+                      {/* Regular pricing for drinks */}
+                      {!menuData[activeCategory].weighToPay && (
+                        <div className="ingredient-details">
+                          {item.popular && <span className="popular-badge">Most Favorite</span>}
+                          {item.spicy && <span className="spicy-badge">🌶️</span>}
+                          {item.vegan && <span className="vegan-badge">🌱</span>}
+                          {item.price && <span className="ingredient-price">${item.price}</span>}
+                          {item.description && <p className="ingredient-description">{item.description}</p>}
+                          {item.category && <span className="ingredient-category">{item.category}</span>}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           )}
         </div>
