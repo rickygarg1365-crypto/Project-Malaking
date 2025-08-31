@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import { sendApplicationEmail } from '../actions/email'
 
 
 export default function CareersPage() {
@@ -42,59 +43,46 @@ export default function CareersPage() {
     }))
   }
 
-  const handleSubmit = (e) => {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitMessage, setSubmitMessage] = useState('')
+
+  const handleSubmit = async (e) => {
     e.preventDefault()
+    setIsSubmitting(true)
+    setSubmitMessage('')
     
-    // Create email body with application data
-    const availabilityText = Object.entries(applicationData.availability)
-      .filter(([day, available]) => available)
-      .map(([day]) => day.charAt(0).toUpperCase() + day.slice(1))
-      .join(', ')
-    
-    const emailBody = `
-Job Application - ${applicationData.position}
-
-Personal Information:
-Name: ${applicationData.firstName} ${applicationData.lastName}
-Email: ${applicationData.email}
-Phone: ${applicationData.phone}
-
-Position Details:
-Position: ${applicationData.position}
-Experience: ${applicationData.experience}
-
-Availability: ${availabilityText || 'None selected'}
-
-Additional Information:
-${applicationData.message}
-    `.trim()
-    
-    // Open default email client with pre-filled data
-    const mailtoLink = `mailto:info@malakinghotpot.ca?subject=Job Application: ${applicationData.position}&body=${encodeURIComponent(emailBody)}`
-    window.open(mailtoLink)
-    
-    // Reset form
-    setApplicationData({
-      firstName: '',
-      lastName: '',
-      email: '',
-      phone: '',
-      position: '',
-      experience: '',
-      availability: {
-        monday: false,
-        tuesday: false,
-        wednesday: false,
-        thursday: false,
-        friday: false,
-        saturday: false,
-        sunday: false
-      },
-      message: ''
-    })
-    
-    // Show success message
-    alert('Thank you for your application! Your email client should open with the application details pre-filled.')
+    try {
+      const result = await sendApplicationEmail(applicationData)
+      
+      if (result.success) {
+        // Reset form
+        setApplicationData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          position: '',
+          experience: '',
+          availability: {
+            monday: false,
+            tuesday: false,
+            wednesday: false,
+            thursday: false,
+            friday: false,
+            saturday: false,
+            sunday: false
+          },
+          message: ''
+        })
+        setSubmitMessage('Thank you for your application! We\'ll review it and get back to you soon.')
+      } else {
+        setSubmitMessage(result.message)
+      }
+    } catch (error) {
+      setSubmitMessage('An error occurred. Please try again.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -403,12 +391,19 @@ ${applicationData.message}
               </div>
 
               <div className="form-submit-section">
-                <button type="submit" className="submit-application-btn">
-                  <span>Submit Application</span>
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <path d="M18 2L9 11M18 2L12 18L9 11M18 2L2 8L9 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
+                <button type="submit" className="submit-application-btn" disabled={isSubmitting}>
+                  <span>{isSubmitting ? 'Submitting...' : 'Submit Application'}</span>
+                  {!isSubmitting && (
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path d="M18 2L9 11M18 2L12 18L9 11M18 2L2 8L9 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  )}
                 </button>
+                {submitMessage && (
+                  <div className={`submit-message ${submitMessage.includes('Thank you') ? 'success' : 'error'}`}>
+                    {submitMessage}
+                  </div>
+                )}
                 <p className="submit-note">We'll review your application and get back to you within 2-3 business days</p>
               </div>
             </form>

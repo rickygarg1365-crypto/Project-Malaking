@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import { sendContactEmail } from '../actions/email'
 
 
 export default function ContactPage() {
@@ -21,33 +22,35 @@ export default function ContactPage() {
     }))
   }
 
-  const handleSubmit = (e) => {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitMessage, setSubmitMessage] = useState('')
+
+  const handleSubmit = async (e) => {
     e.preventDefault()
+    setIsSubmitting(true)
+    setSubmitMessage('')
     
-    // Create email body with form data
-    const emailBody = `
-Name: ${formData.name}
-Email: ${formData.email}
-Phone: ${formData.phone}
-Subject: ${formData.subject}
-Message: ${formData.message}
-    `.trim()
-    
-    // Open default email client with pre-filled data
-    const mailtoLink = `mailto:info@malakinghotpot.ca?subject=Contact Form: ${formData.subject}&body=${encodeURIComponent(emailBody)}`
-    window.open(mailtoLink)
-    
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      subject: '',
-      message: ''
-    })
-    
-    // Show success message
-    alert('Thank you for your message! Your email client should open with the message pre-filled.')
+    try {
+      const result = await sendContactEmail(formData)
+      
+      if (result.success) {
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: ''
+        })
+        setSubmitMessage('Thank you for your message! We\'ll get back to you soon.')
+      } else {
+        setSubmitMessage(result.message)
+      }
+    } catch (error) {
+      setSubmitMessage('An error occurred. Please try again.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -170,12 +173,19 @@ Message: ${formData.message}
                   ></textarea>
                 </div>
                 
-                <button type="submit" className="submit-btn-modern">
-                  <span>Send Message</span>
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <path d="M18 2L9 11M18 2L12 18L9 11M18 2L2 8L9 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
+                <button type="submit" className="submit-btn-modern" disabled={isSubmitting}>
+                  <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
+                  {!isSubmitting && (
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path d="M18 2L9 11M18 2L12 18L9 11M18 2L2 8L9 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  )}
                 </button>
+                {submitMessage && (
+                  <div className={`submit-message ${submitMessage.includes('Thank you') ? 'success' : 'error'}`}>
+                    {submitMessage}
+                  </div>
+                )}
               </form>
             </div>
             

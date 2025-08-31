@@ -136,7 +136,9 @@ export default function HomePage() {
                 key={index}
                 className={`hero-nav-dot ${index === currentSlide ? 'active' : ''}`}
                 onClick={() => changeSlide(index)}
-              />
+              >
+                <div className="dot-timer"></div>
+              </button>
             ))}
           </div>
           
