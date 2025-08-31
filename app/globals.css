@@ -1082,12 +1082,23 @@ p {
   cursor: pointer;
   transition: all var(--transition-normal);
   position: relative;
-  overflow: hidden;
 }
 
 .hero-dot.active {
-  background: #4B5563;
+  background: #374151;
   border-color: var(--white);
+}
+
+.hero-dot.active::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #1F2937;
 }
 
 .hero-dot:hover {
@@ -10857,11 +10868,13 @@ p {
 }
 
 .about-hero-title-simple {
+  font-family: 'Permanent Marker', cursive;
   font-size: 3.5rem;
-  font-weight: 700;
+  font-weight: 400;
   margin-bottom: 20px;
   line-height: 1.2;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
 }
 
 .about-hero-title-simple .title-highlight {
@@ -10873,6 +10886,7 @@ p {
   margin-bottom: 30px;
   line-height: 1.6;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
 }
 
 /* Responsive styles for about hero */
