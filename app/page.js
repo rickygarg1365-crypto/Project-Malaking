@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState, useEffect, useRef } from 'react'
+import OptimizedImage from '../components/OptimizedImage'
 
 export default function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -97,7 +98,7 @@ export default function HomePage() {
               className={`hero-slide ${index === currentSlide ? 'active' : ''}`}
             >
               <div className="hero-background">
-                <Image 
+                <OptimizedImage 
                   src={slide.image} 
                   alt={slide.title}
                   fill
@@ -105,6 +106,7 @@ export default function HomePage() {
                   priority={true}
                   quality={85}
                   sizes="100vw"
+                  className="hero-image"
                 />
                 <div className="hero-overlay"></div>
               </div>

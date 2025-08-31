@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
+import OptimizedImage from '../../components/OptimizedImage'
 
 export default function AboutPage() {
   return (
@@ -9,7 +10,7 @@ export default function AboutPage() {
       {/* Simple Hero Section */}
       <section className="about-hero-simple">
         <div className="hero-background-simple">
-          <Image 
+          <OptimizedImage 
             src="/assets/images/Uniform.jpg" 
             alt="About Hero Background"
             fill
@@ -17,6 +18,7 @@ export default function AboutPage() {
             priority={true}
             quality={85}
             sizes="100vw"
+            className="hero-image"
           />
           <div className="hero-overlay-simple"></div>
         </div>

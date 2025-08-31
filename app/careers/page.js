@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import OptimizedImage from '../../components/OptimizedImage'
 
 export default function CareersPage() {
   const [applicationData, setApplicationData] = useState({
@@ -52,7 +53,7 @@ export default function CareersPage() {
       {/* Modern Careers Hero */}
       <section className="careers-hero-modern">
         <div className="hero-bg-careers">
-          <Image 
+          <OptimizedImage 
             src="/assets/images/Table.jpg" 
             alt="Careers Hero Background"
             fill
@@ -60,6 +61,7 @@ export default function CareersPage() {
             priority={true}
             quality={85}
             sizes="100vw"
+            className="hero-image"
           />
           <div className="hero-overlay-careers"></div>
         </div>

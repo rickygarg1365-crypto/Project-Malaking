@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import OptimizedImage from '../../components/OptimizedImage'
 import Link from 'next/link'
 
 export default function LocationsPage() {
@@ -7,7 +8,7 @@ export default function LocationsPage() {
       {/* Modern Location Hero */}
       <section className="locations-hero-modern">
         <div className="hero-bg-locations">
-          <Image 
+          <OptimizedImage 
             src="/assets/images/Checkout Area.jpg" 
             alt="Location Hero Background"
             fill
@@ -15,6 +16,7 @@ export default function LocationsPage() {
             priority={true}
             quality={85}
             sizes="100vw"
+            className="hero-image"
           />
           <div className="hero-overlay-locations"></div>
         </div>

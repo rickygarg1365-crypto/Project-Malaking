@@ -2,6 +2,7 @@ import './globals.css'
 import { Poppins } from 'next/font/google'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import LoadingProvider from '../components/LoadingProvider'
 
 const poppins = Poppins({ 
   subsets: ['latin'],
@@ -26,21 +27,29 @@ export default function RootLayout({ children }) {
         <link rel="shortcut icon" href="/favicon.png" />
         <meta name="msapplication-TileImage" content="/favicon.png" />
         
-        {/* Preload critical hero images */}
-        <link rel="preload" as="image" href="/assets/images/Grand Opening.jpg" />
-        <link rel="preload" as="image" href="/assets/images/Uniform.jpg" />
-        <link rel="preload" as="image" href="/assets/images/Fresh Ingredients.jpg" />
-        <link rel="preload" as="image" href="/assets/images/Table.jpg" />
-        <link rel="preload" as="image" href="/assets/images/Checkout Area.jpg" />
-        <link rel="preload" as="image" href="/assets/images/Seating Area.jpg" />
-        <link rel="preload" as="image" href="/assets/images/Drinks section.jpg" />
+        {/* DNS prefetch for faster connections */}
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+        
+        {/* Preload critical hero images with higher priority */}
+        <link rel="preload" as="image" href="/assets/images/Grand Opening.jpg" fetchpriority="high" />
+        <link rel="preload" as="image" href="/assets/images/Uniform.jpg" fetchpriority="high" />
+        <link rel="preload" as="image" href="/assets/images/Fresh Ingredients.jpg" fetchpriority="high" />
+        <link rel="preload" as="image" href="/assets/images/Table.jpg" fetchpriority="high" />
+        <link rel="preload" as="image" href="/assets/images/Checkout Area.jpg" fetchpriority="high" />
+        <link rel="preload" as="image" href="/assets/images/Seating Area.jpg" fetchpriority="high" />
+        <link rel="preload" as="image" href="/assets/images/Drinks section.jpg" fetchpriority="high" />
+        <link rel="preload" as="image" href="/assets/images/Counter.jpg" fetchpriority="high" />
+        <link rel="preload" as="image" href="/assets/images/Sauce Bar.jpg" fetchpriority="high" />
       </head>
       <body className={poppins.className}>
-        <Navbar />
-        <main>
-          {children}
-        </main>
-        <Footer />
+        <LoadingProvider>
+          <Navbar />
+          <main>
+            {children}
+          </main>
+          <Footer />
+        </LoadingProvider>
       </body>
     </html>
   )
