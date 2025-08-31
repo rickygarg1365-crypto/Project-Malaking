@@ -89,7 +89,7 @@ export default function LocationsPage() {
                   <h4>Get In Touch</h4>
                   <p>
                     <a href="tel:+16044963148">+1 (604) 496-3148</a><br/>
-                    <a href="mailto:info@malaking.ca">info@malaking.ca</a>
+                    <a href="mailto:info@malakinghotpot.ca">info@malakinghotpot.ca</a>
                   </p>
                 </div>
               </div>

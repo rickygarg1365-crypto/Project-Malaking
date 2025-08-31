@@ -81,7 +81,7 @@ export default function Footer() {
                   </div>
                   <div className="contact-info-exact">
                     <span className="contact-label-exact">EMAIL</span>
-                    <a href="mailto:info@malaking.ca" className="contact-value-exact">info@malaking.ca</a>
+                    <a href="mailto:info@malakinghotpot.ca" className="contact-value-exact">info@malakinghotpot.ca</a>
                   </div>
                 </div>
                 

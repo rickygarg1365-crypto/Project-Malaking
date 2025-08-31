@@ -23,9 +23,31 @@ export default function ContactPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log('Form submitted:', formData)
-    // You can add API call here to send the form data
+    
+    // Create email body with form data
+    const emailBody = `
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
+Subject: ${formData.subject}
+Message: ${formData.message}
+    `.trim()
+    
+    // Open default email client with pre-filled data
+    const mailtoLink = `mailto:info@malakinghotpot.ca?subject=Contact Form: ${formData.subject}&body=${encodeURIComponent(emailBody)}`
+    window.open(mailtoLink)
+    
+    // Reset form
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      subject: '',
+      message: ''
+    })
+    
+    // Show success message
+    alert('Thank you for your message! Your email client should open with the message pre-filled.')
   }
 
   return (
@@ -171,7 +193,7 @@ export default function ContactPage() {
                       <span className="action-value">+1 (604) 496-3148</span>
                     </div>
                   </a>
-                  <a href="mailto:info@malaking.ca" className="quick-action email-action">
+                  <a href="mailto:info@malakinghotpot.ca" className="quick-action email-action">
                     <div className="action-icon">✉️</div>
                     <div className="action-content">
                       <span className="action-label">Email Us</span>

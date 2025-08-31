@@ -44,8 +44,57 @@ export default function CareersPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log('Application submitted:', applicationData)
-    // Handle application submission here
+    
+    // Create email body with application data
+    const availabilityText = Object.entries(applicationData.availability)
+      .filter(([day, available]) => available)
+      .map(([day]) => day.charAt(0).toUpperCase() + day.slice(1))
+      .join(', ')
+    
+    const emailBody = `
+Job Application - ${applicationData.position}
+
+Personal Information:
+Name: ${applicationData.firstName} ${applicationData.lastName}
+Email: ${applicationData.email}
+Phone: ${applicationData.phone}
+
+Position Details:
+Position: ${applicationData.position}
+Experience: ${applicationData.experience}
+
+Availability: ${availabilityText || 'None selected'}
+
+Additional Information:
+${applicationData.message}
+    `.trim()
+    
+    // Open default email client with pre-filled data
+    const mailtoLink = `mailto:info@malakinghotpot.ca?subject=Job Application: ${applicationData.position}&body=${encodeURIComponent(emailBody)}`
+    window.open(mailtoLink)
+    
+    // Reset form
+    setApplicationData({
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      position: '',
+      experience: '',
+      availability: {
+        monday: false,
+        tuesday: false,
+        wednesday: false,
+        thursday: false,
+        friday: false,
+        saturday: false,
+        sunday: false
+      },
+      message: ''
+    })
+    
+    // Show success message
+    alert('Thank you for your application! Your email client should open with the application details pre-filled.')
   }
 
   return (
