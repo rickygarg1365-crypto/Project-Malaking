@@ -389,7 +389,6 @@ export default function MenuPage() {
             src="/assets/images/Fresh Ingredients.jpg"
             alt="Menu Hero Background"
             fill
-            style={{ objectFit: 'cover' }}
             priority={true}
             quality={85}
             sizes="100vw"

@@ -12,7 +12,6 @@ export default function LocationsPage() {
             src="/assets/images/Checkout Area.jpg" 
             alt="Location Hero Background"
             fill
-            style={{ objectFit: 'cover' }}
             priority={true}
             quality={85}
             sizes="100vw"

@@ -86,18 +86,10 @@ body {
 
 /* Enhanced Image Loading Optimization */
 img {
-  transition: opacity 0.3s ease;
+  transition: opacity 0.15s ease;
   will-change: opacity;
   transform: translateZ(0);
   backface-visibility: hidden;
-}
-
-img[data-loading="true"] {
-  opacity: 0;
-}
-
-img[data-loading="false"] {
-  opacity: 1;
 }
 
 /* Smooth image transitions */
@@ -124,33 +116,52 @@ img[data-loading="false"] {
   }
 }
 
-/* Preload critical images */
-.hero-background {
+/* Hero image loading optimization */
+.hero-background,
+.hero-bg-menu,
+.hero-bg-locations,
+.hero-bg-careers,
+.hero-bg-contact,
+.hero-bg-rewards,
+.hero-background-simple {
+  position: relative;
+  overflow: hidden;
   transform: translateZ(0);
   backface-visibility: hidden;
   contain: layout style paint;
 }
 
-/* Reduce layout shifts */
-.hero-slide {
-  contain: layout style paint;
-}
-
-/* Hero image loading optimization */
-.hero-background img {
-  transition: opacity 0.3s ease;
+/* Smooth image loading for all hero images */
+.hero-background img,
+.hero-bg-menu img,
+.hero-bg-locations img,
+.hero-bg-careers img,
+.hero-bg-contact img,
+.hero-bg-rewards img,
+.hero-background-simple img {
+  transition: opacity 0.2s ease;
   will-change: opacity;
 }
 
-.hero-background img[data-loading="true"] {
-  opacity: 0;
+/* Fallback background for hero sections */
+.hero-background::before,
+.hero-bg-menu::before,
+.hero-bg-locations::before,
+.hero-bg-careers::before,
+.hero-bg-contact::before,
+.hero-bg-rewards::before,
+.hero-background-simple::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--gray-100) 0%, var(--gray-200) 100%);
+  z-index: -1;
 }
 
-.hero-background img[data-loading="false"] {
-  opacity: 1;
-}
-
-/* Hero loading skeleton */
+/* Fallback background for hero sections */
 .hero-background::before {
   content: '';
   position: absolute;
@@ -158,23 +169,8 @@ img[data-loading="false"] {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
+  background: linear-gradient(135deg, var(--gray-100) 0%, var(--gray-200) 100%);
   z-index: -1;
-  animation: hero-loading 1.5s ease-in-out infinite;
-}
-
-@keyframes hero-loading {
-  0%, 100% {
-    opacity: 0.3;
-  }
-  50% {
-    opacity: 0.6;
-  }
-}
-
-/* Hide skeleton when image is loaded */
-.hero-background img[data-loading="false"] + .hero-background::before {
-  display: none;
 }
 
 /* Performance optimizations for images */

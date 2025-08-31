@@ -14,7 +14,6 @@ export default function AboutPage() {
             src="/assets/images/Uniform.jpg" 
             alt="About Hero Background"
             fill
-            style={{ objectFit: 'cover' }}
             priority={true}
             quality={85}
             sizes="100vw"

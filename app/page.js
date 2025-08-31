@@ -102,7 +102,6 @@ export default function HomePage() {
                   src={slide.image} 
                   alt={slide.title}
                   fill
-                  style={{ objectFit: 'cover' }}
                   priority={true}
                   quality={85}
                   sizes="100vw"

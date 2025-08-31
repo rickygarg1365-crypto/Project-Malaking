@@ -55,9 +55,8 @@ export default function CareersPage() {
         <div className="hero-bg-careers">
           <Image 
             src="/assets/images/Table.jpg" 
-            alt="Careers Hero Background"
+            alt="Location Hero Background"
             fill
-            style={{ objectFit: 'cover' }}
             priority={true}
             quality={85}
             sizes="100vw"

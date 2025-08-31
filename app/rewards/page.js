@@ -10,16 +10,15 @@ export default function RewardsPage() {
         {/* Hero Section */}
         <section className="rewards-hero-modern">
           <div className="hero-bg-rewards">
-            <Image 
-              src="/assets/images/Drinks section.jpg" 
-              alt="Rewards Hero Background"
-              fill
-              style={{ objectFit: 'cover' }}
-              priority={true}
-              quality={85}
-              sizes="100vw"
-              className="hero-image"
-            />
+                                             <Image 
+             src="/assets/images/Drinks section.jpg" 
+             alt="Rewards Hero Background"
+             fill
+             priority={true}
+             quality={85}
+             sizes="100vw"
+             className="hero-image"
+           />
             <div className="hero-overlay-rewards"></div>
           </div>
           <div className="container">
