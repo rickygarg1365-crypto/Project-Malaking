@@ -23,6 +23,8 @@ export default function RootLayout({ children }) {
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png" />
         <link rel="apple-touch-icon" href="/favicon.png" />
+        <link rel="shortcut icon" href="/favicon.png" />
+        <meta name="msapplication-TileImage" content="/favicon.png" />
       </head>
       <body className={poppins.className}>
         <Navbar />
