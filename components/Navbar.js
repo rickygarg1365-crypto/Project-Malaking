@@ -44,7 +44,7 @@ export default function Navbar() {
     },
     {
       name: 'Uber Eats',
-      url: '#',
+      url: 'https://www.ubereats.com/ca/store/mala-king-hot-pot/7Zlqbd6ITeCgvLyh0pg1Iw?srsltid=AfmBOoqOokS1KKtrZ4VccsgoS9DPDIKxrE4uz9ARwttxIAkeaxOGhECH',
       color: '#00B14F'
     },
     {
@@ -56,6 +56,11 @@ export default function Navbar() {
       name: 'Fantuan',
       url: '#',
       color: '#FF6B35'
+    },
+    {
+      name: 'Clover',
+      url: 'https://www.clover.com/online-ordering/mala-king-hot-pot-surrey',
+      color: '#52C41A'
     }
   ]
 
