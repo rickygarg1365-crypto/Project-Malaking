@@ -400,17 +400,7 @@ p {
   position: relative;
 }
 
-.nav-menu::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent 0%, rgba(179, 46, 29, 0.1) 50%, transparent 100%);
-  transform: translateY(-50%);
-  z-index: -1;
-}
+/* Removed the line between navbar sections */
 
 .nav-link {
   text-decoration: none;
@@ -2633,9 +2623,9 @@ p {
     gap: 24px;
   }
   
-  /* Enhanced tablet header fix */
+  /* Enhanced tablet header fix for Samsung S9 and OnePlus Tab */
   .navbar {
-    padding: 0 16px;
+    padding: 0 12px;
     position: fixed;
     top: 0;
     left: 0;
@@ -2647,39 +2637,88 @@ p {
   }
   
   .nav-container {
-    padding: 12px 0;
+    padding: 8px 0;
   }
   
   .nav-content {
-    padding: 0 8px;
-    gap: 16px;
+    padding: 0 4px;
+    gap: 12px;
   }
   
   .nav-actions {
-    gap: 8px;
+    gap: 6px;
   }
   
   .nav-action {
-    padding: 8px 14px;
-    font-size: 0.85rem;
+    padding: 6px 10px;
+    font-size: 0.8rem;
     white-space: nowrap;
+    min-height: 36px;
   }
   
   .logo-title {
-    font-size: 18px;
+    font-size: 16px;
   }
   
   .logo-subtitle {
-    font-size: 7px;
+    font-size: 6px;
   }
   
   .nav-menu {
-    gap: 16px;
+    gap: 12px;
+    margin: 0 20px;
   }
   
   .nav-link {
-    font-size: 0.9rem;
-    padding: 8px 12px;
+    font-size: 0.85rem;
+    padding: 6px 10px;
+  }
+  
+  .logo-wrapper {
+    gap: 12px;
+  }
+}
+
+/* Tablet Portrait Mode Specific Fixes */
+@media (max-width: 1024px) and (min-width: 769px) and (orientation: portrait) {
+  .navbar {
+    padding: 0 8px;
+  }
+  
+  .nav-container {
+    padding: 6px 0;
+  }
+  
+  .nav-content {
+    gap: 8px;
+  }
+  
+  .nav-actions {
+    gap: 4px;
+  }
+  
+  .nav-action {
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    min-height: 32px;
+  }
+  
+  .logo-title {
+    font-size: 14px;
+  }
+  
+  .logo-subtitle {
+    font-size: 5px;
+  }
+  
+  .nav-menu {
+    gap: 8px;
+    margin: 0 12px;
+  }
+  
+  .nav-link {
+    font-size: 0.8rem;
+    padding: 4px 8px;
   }
 }
 
