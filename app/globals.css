@@ -9514,14 +9514,16 @@ p {
   display: grid;
   grid-template-columns: 1fr 300px;
   gap: 40px;
-  background: #ffffff;
+  background: linear-gradient(135deg, 
+    rgba(179, 46, 29, 0.05) 0%, 
+    rgba(255, 107, 53, 0.03) 50%, 
+    rgba(179, 46, 29, 0.05) 100%);
   border-radius: 32px;
   padding: 48px;
   margin-top: 64px;
-  border: 2px solid #e9ecef;
+  border: 1px solid rgba(179, 46, 29, 0.1);
   position: relative;
   overflow: hidden;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
 }
 
 .featured-broth-spotlight::before {
@@ -9531,11 +9533,7 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: 
-    radial-gradient(circle at 25% 25%, #f8f9fa 0%, #f8f9fa 50%, transparent 50%),
-    radial-gradient(circle at 75% 75%, #e9ecef 0%, #e9ecef 50%, transparent 50%);
-  background-size: 60px 60px;
-  background-position: 0 0, 30px 30px;
+  background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23B32E1D" fill-opacity="0.03"><circle cx="30" cy="30" r="2"/></g></svg>') repeat;
   z-index: 1;
 }
 
@@ -9548,14 +9546,14 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #495057;
-  color: #ffffff;
+  background: linear-gradient(135deg, #FCD34D 0%, #F59E0B 100%);
+  color: #92400E;
   padding: 12px 20px;
   border-radius: 25px;
   font-weight: 700;
   font-size: 0.9rem;
   margin-bottom: 24px;
-  box-shadow: 0 4px 16px rgba(73, 80, 87, 0.2);
+  box-shadow: 0 4px 16px rgba(245, 158, 11, 0.2);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -9579,7 +9577,7 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  background: #495057;
+  background: linear-gradient(135deg, var(--primary-red) 0%, #FF6B35 100%);
   color: white;
   padding: 16px 32px;
   border: none;
@@ -9588,15 +9586,14 @@ p {
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 8px 24px rgba(73, 80, 87, 0.2);
+  box-shadow: 0 8px 24px rgba(179, 46, 29, 0.2);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
 .spotlight-cta:hover {
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 12px 32px rgba(73, 80, 87, 0.3);
-  background: #343a40;
+  box-shadow: 0 12px 32px rgba(179, 46, 29, 0.3);
 }
 
 .cta-arrow {
@@ -9690,15 +9687,17 @@ p {
 
 /* Weigh-to-Pay Header */
 .weigh-to-pay-header {
-  background: #ffffff;
+  background: linear-gradient(135deg, 
+    rgba(179, 46, 29, 0.05) 0%, 
+    rgba(255, 107, 53, 0.03) 50%, 
+    rgba(179, 46, 29, 0.05) 100%);
   border-radius: 20px;
   padding: 32px;
   margin-bottom: 32px;
   text-align: center;
-  border: 2px solid #e9ecef;
+  border: 1px solid rgba(179, 46, 29, 0.1);
   position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
 
 .weigh-to-pay-header::before {
@@ -9708,11 +9707,7 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: 
-    radial-gradient(circle at 30% 30%, #f8f9fa 0%, #f8f9fa 50%, transparent 50%),
-    radial-gradient(circle at 70% 70%, #e9ecef 0%, #e9ecef 50%, transparent 50%);
-  background-size: 50px 50px;
-  background-position: 0 0, 25px 25px;
+  background: url('data:image/svg+xml,<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23B32E1D" fill-opacity="0.02"><circle cx="20" cy="20" r="1.5"/></g></svg>') repeat;
   z-index: 1;
 }
 
@@ -9720,12 +9715,12 @@ p {
   display: inline-flex;
   align-items: baseline;
   gap: 8px;
-  background: #495057;
+  background: linear-gradient(135deg, var(--primary-red) 0%, #FF6B35 100%);
   color: white;
   padding: 16px 32px;
   border-radius: 50px;
   font-weight: 700;
-  box-shadow: 0 8px 24px rgba(73, 80, 87, 0.2);
+  box-shadow: 0 8px 24px rgba(179, 46, 29, 0.2);
   margin-bottom: 16px;
   position: relative;
   z-index: 2;
@@ -10137,13 +10132,15 @@ p {
 
 /* Toppings Section */
 .drinks-toppings-section {
-  background: #ffffff;
+  background: linear-gradient(135deg, 
+    rgba(179, 46, 29, 0.05) 0%, 
+    rgba(255, 107, 53, 0.03) 50%, 
+    rgba(179, 46, 29, 0.05) 100%);
   border-radius: 20px;
   padding: 32px;
-  border: 2px solid #e9ecef;
+  border: 1px solid rgba(179, 46, 29, 0.1);
   position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
 
 .drinks-toppings-section::before {
@@ -10153,11 +10150,7 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: 
-    radial-gradient(circle at 20% 20%, #f8f9fa 0%, #f8f9fa 50%, transparent 50%),
-    radial-gradient(circle at 80% 80%, #e9ecef 0%, #e9ecef 50%, transparent 50%);
-  background-size: 40px 40px;
-  background-position: 0 0, 20px 20px;
+  background: url('data:image/svg+xml,<svg width="25" height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23B32E1D" fill-opacity="0.03"><circle cx="12.5" cy="12.5" r="1"/></g></svg>') repeat;
   z-index: 1;
 }
 
@@ -10178,13 +10171,13 @@ p {
 }
 
 .toppings-price {
-  background: #495057;
-  color: #ffffff;
+  background: linear-gradient(135deg, #FCD34D 0%, #F59E0B 100%);
+  color: #92400E;
   padding: 8px 16px;
   border-radius: 20px;
   font-weight: 700;
   font-size: 1rem;
-  box-shadow: 0 4px 16px rgba(73, 80, 87, 0.2);
+  box-shadow: 0 4px 16px rgba(245, 158, 11, 0.2);
 }
 
 .toppings-grid {
@@ -10196,11 +10189,12 @@ p {
 }
 
 .topping-item-card {
-  background: #f8f9fa;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
   border-radius: 12px;
   padding: 12px 16px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  border: 1px solid #e9ecef;
+  border: 1px solid rgba(255, 255, 255, 0.7);
   transition: all 0.3s ease;
   text-align: center;
 }
@@ -10208,8 +10202,7 @@ p {
 .topping-item-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  border-color: #495057;
-  background: #ffffff;
+  border-color: rgba(245, 158, 11, 0.3);
 }
 
 .topping-name {
@@ -11421,16 +11414,12 @@ p {
   padding: 2rem;
 }
 
-/* Premium semicircle pattern background for menu page content */
+/* Premium x/o pattern background for menu page content */
 .menu-content-background {
   background-color: #ffffff;
   background-image: 
-    radial-gradient(circle at 50% 0%, #f8f9fa 0%, #f8f9fa 50%, transparent 50%),
-    radial-gradient(circle at 0% 50%, #e9ecef 0%, #e9ecef 50%, transparent 50%),
-    radial-gradient(circle at 100% 50%, #e9ecef 0%, #e9ecef 50%, transparent 50%),
-    radial-gradient(circle at 50% 100%, #f8f9fa 0%, #f8f9fa 50%, transparent 50%);
-  background-size: 80px 80px;
-  background-position: 0 0, 40px 40px, 40px 40px, 0 0;
+    url('data:image/svg+xml,<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><g fill="%23e9ecef" fill-opacity="0.3"><text x="10" y="15" font-family="Arial" font-size="12">x</text><text x="30" y="35" font-family="Arial" font-size="12">o</text><text x="30" y="15" font-family="Arial" font-size="12">x</text><text x="10" y="35" font-family="Arial" font-size="12">o</text></g></svg>');
+  background-size: 40px 40px;
   min-height: 100vh;
   padding: 4rem 0;
 }
