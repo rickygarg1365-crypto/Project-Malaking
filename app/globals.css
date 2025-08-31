@@ -1085,7 +1085,7 @@ p {
 }
 
 .hero-dot.active {
-  background: #374151;
+  background: #9CA3AF;
   border-color: var(--white);
 }
 
@@ -1098,7 +1098,7 @@ p {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #1F2937;
+  background: #374151;
 }
 
 .hero-dot:hover {
@@ -3555,11 +3555,13 @@ p {
 /* Simple Clean Hero Section */
 .about-hero-simple {
   position: relative;
-  min-height: 70vh;
+  height: 80vh;
+  min-height: 600px;
+  margin-top: 76px;
+  overflow: hidden;
   display: flex;
   align-items: center;
-  overflow: hidden;
-  padding: 180px 0 120px 0;
+  justify-content: center;
 }
 
 .hero-background-simple {
@@ -6289,7 +6291,7 @@ p {
 .menu-navigation-section {
   background: #ffffff;
   padding: var(--spacing-md) 0;
-  border-bottom: 2px solid var(--primary-red);
+  border-bottom: 1px solid #e5e7eb;
   position: sticky;
   top: 80px;
   z-index: 100;
@@ -6329,12 +6331,12 @@ p {
 
 .menu-nav-item:hover {
   color: var(--primary-red);
-  background: rgba(179, 46, 29, 0.05);
+  background: transparent;
 }
 
 .menu-nav-item.active {
   color: var(--primary-red);
-  background: rgba(179, 46, 29, 0.1);
+  background: transparent;
   position: relative;
 }
 
