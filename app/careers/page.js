@@ -53,7 +53,7 @@ export default function CareersPage() {
       <section className="careers-hero-modern">
         <div className="hero-bg-careers">
           <Image 
-            src="/assets/images/Restaurant Look.jpg" 
+            src="/assets/images/Table.jpg" 
             alt="Careers Hero Background"
             fill
             style={{ objectFit: 'cover' }}

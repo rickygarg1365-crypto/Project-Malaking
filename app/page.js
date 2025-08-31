@@ -15,7 +15,7 @@ export default function HomePage() {
       title: "Grand Opening Week!",
       subtitle: "August 29th - September 5th",
       description: "🎉 We're officially opening our doors! Join us for our grand opening week celebration with amazing offers: 20% off on all dishes and 50% off on all drinks. Be among the first to experience Surrey's newest hot pot destination!",
-      image: "/assets/images/Restaurant Look.jpg",
+      image: "/assets/images/Grand Opening.jpg",
       cta: "Find Location",
       ctaLink: "/locations"
     },
@@ -24,7 +24,7 @@ export default function HomePage() {
       title: "Authentic Hot Pot Experience",
       subtitle: "Fresh & Flavorful",
       description: "Discover Surrey's premier hot pot destination with our signature Ma La Tang broth and premium ingredients.",
-      image: "/assets/images/Fresh Ingredients.jpg",
+      image: "/assets/images/Counter.jpg",
       cta: "Explore Menu",
       ctaLink: "/menu"
     },
@@ -33,7 +33,7 @@ export default function HomePage() {
       title: "Weigh to Pay, Your Way",
       subtitle: "Customizable & Affordable",
       description: "Choose from our fresh selection of meats, seafood, and vegetables. Pay only for what you love.",
-      image: "/assets/images/Grand Opening.jpg",
+      image: "/assets/images/Sauce Bar.jpg",
       cta: "How It Works",
       ctaLink: "#how-it-works"
     }

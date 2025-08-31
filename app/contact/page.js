@@ -33,7 +33,7 @@ export default function ContactPage() {
       <section className="contact-hero-modern">
         <div className="hero-bg-contact">
           <Image 
-            src="/assets/images/Restaurant Look.jpg" 
+            src="/assets/images/Seating Area.jpg" 
             alt="Contact Hero Background"
             fill
             style={{ objectFit: 'cover' }}
@@ -224,7 +224,7 @@ export default function ContactPage() {
           <div className="social-cards-grid">
             
             {/* Instagram Card */}
-            <div className="social-card-modern instagram-card">
+            <a href="https://www.instagram.com/malakinghotpot.surrey?igsh=MXQ3MWk0eWgzbzZyNA==" target="_blank" rel="noopener noreferrer" className="social-card-modern instagram-card">
               <div className="social-icon-large">
                 <Image src="/assets/images/instagram-social.svg" alt="Instagram" width={60} height={60} />
               </div>
@@ -232,11 +232,11 @@ export default function ContactPage() {
               <p className="social-platform-description">
                 Follow us for mouthwatering food photos, daily specials, and behind-the-scenes content.
               </p>
-              <p className="social-handle-red">@malakinghotpot</p>
-            </div>
+              <p className="social-handle-red">@malakinghotpot.surrey</p>
+            </a>
 
             {/* Facebook Card */}
-            <div className="social-card-modern facebook-card">
+            <a href="https://www.facebook.com/share/1kCvQTY5qa/" target="_blank" rel="noopener noreferrer" className="social-card-modern facebook-card">
               <div className="social-icon-large">
                 <Image src="/assets/images/facebook-social.svg" alt="Facebook" width={60} height={60} />
               </div>
@@ -244,11 +244,11 @@ export default function ContactPage() {
               <p className="social-platform-description">
                 Like our page for updates, events, and community news.
               </p>
-              <p className="social-handle-red">@malakinghotpot</p>
-            </div>
+              <p className="social-handle-red">Mala King Hot Pot</p>
+            </a>
 
             {/* TikTok Card */}
-            <div className="social-card-modern tiktok-card">
+            <a href="https://www.tiktok.com/@malakinghotpot?_t=ZS-8zKWtkqEbuT&_r=1" target="_blank" rel="noopener noreferrer" className="social-card-modern tiktok-card">
               <div className="social-icon-large tiktok-icon-dark">
                 <Image src="/assets/images/tiktok-footer.svg" alt="TikTok" width={60} height={60} />
               </div>
@@ -257,7 +257,7 @@ export default function ContactPage() {
                 Watch our cooking videos, staff highlights, and fun content.
               </p>
               <p className="social-handle-red">@malakinghotpot</p>
-            </div>
+            </a>
 
             {/* XiaoHongShu Card */}
             <div className="social-card-modern xiaohongshu-card">

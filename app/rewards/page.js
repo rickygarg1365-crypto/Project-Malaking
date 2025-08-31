@@ -10,7 +10,7 @@ export default function RewardsPage() {
         <section className="rewards-hero-modern">
           <div className="hero-bg-rewards">
             <Image
-              src="/assets/images/Restaurant Look.jpg"
+              src="/assets/images/Drinks section.jpg"
               alt="Rewards Hero Background"
               fill
               style={{ objectFit: 'cover' }}

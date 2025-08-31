@@ -5145,6 +5145,9 @@ p {
     0 4px 16px rgba(0, 0, 0, 0.04);
   border: 1px solid rgba(0, 0, 0, 0.05);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
 
 .social-card-modern:hover {
@@ -5152,6 +5155,8 @@ p {
   box-shadow: 
     0 20px 40px rgba(0, 0, 0, 0.12),
     0 8px 16px rgba(0, 0, 0, 0.08);
+  text-decoration: none;
+  color: inherit;
 }
 
 .social-icon-large {
@@ -9127,7 +9132,7 @@ p {
 .broth-image-wrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 4/3;
+  aspect-ratio: 16/9;
   overflow: hidden;
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   border-radius: 16px;
@@ -9346,7 +9351,7 @@ p {
   }
   
   .broth-image-wrapper {
-    aspect-ratio: 4/3;
+    aspect-ratio: 16/9;
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     border-radius: 16px;
     border: 2px solid rgba(179, 46, 29, 0.1);

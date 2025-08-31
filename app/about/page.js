@@ -10,7 +10,7 @@ export default function AboutPage() {
       <section className="about-hero-simple">
         <div className="hero-background-simple">
           <Image 
-            src="/assets/images/Restaurant Look.jpg" 
+            src="/assets/images/Uniform.jpg" 
             alt="About Hero Background"
             fill
             style={{ objectFit: 'cover' }}

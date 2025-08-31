@@ -31,16 +31,13 @@ export default function Footer() {
               
               {/* Social Media Icons */}
               <div className="footer-social-exact">
-                <a href="#" className="social-icon-exact" aria-label="Instagram">
+                <a href="https://www.instagram.com/malakinghotpot.surrey?igsh=MXQ3MWk0eWgzbzZyNA==" className="social-icon-exact" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
                   <Image src="/assets/images/instagram-footer.svg" alt="Instagram" width={24} height={24} />
                 </a>
-                <a href="#" className="social-icon-exact" aria-label="Facebook">
+                <a href="https://www.facebook.com/share/1kCvQTY5qa/" className="social-icon-exact" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
                   <Image src="/assets/images/facebook-footer.svg" alt="Facebook" width={24} height={24} />
                 </a>
-                <a href="#" className="social-icon-exact" aria-label="WhatsApp">
-                  <Image src="/assets/images/whatsapp-footer.svg" alt="WhatsApp" width={24} height={24} />
-                </a>
-                <a href="#" className="social-icon-exact" aria-label="TikTok">
+                <a href="https://www.tiktok.com/@malakinghotpot?_t=ZS-8zKWtkqEbuT&_r=1" className="social-icon-exact" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
                   <Image src="/assets/images/tiktok-footer.svg" alt="TikTok" width={24} height={24} />
                 </a>
                 <a href="#" className="social-icon-exact" aria-label="Xiaohongshu">
