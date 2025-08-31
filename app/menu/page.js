@@ -402,33 +402,117 @@ export default function MenuPage() {
             </div>
           )}
 
-          {/* Broths Special Layout */}
+          {/* Redesigned Broths Section */}
           {activeCategory === 'broths' ? (
-            <div className="broths-special-grid">
-              {menuData[activeCategory].items.map((item, index) => (
-                <div key={index} className="broth-card-special">
-                  <div className="broth-image-container">
-                    <Image
-                      src={item.image}
-                      alt={item.name}
-                      width={400}
-                      height={250}
-                      className="broth-dish-image"
-                    />
-                  </div>
-                  <div className="broth-content">
-                    <div className="broth-header">
-                      <h3 className="broth-name">{item.name}</h3>
-                      <div className="broth-badges">
-                        {item.spicy && <span className="spicy-badge">🌶️</span>}
-                        {item.vegan && <span className="vegan-badge">🌱</span>}
+            <div className="broths-redesigned-container">
+              {/* Filter Tabs */}
+              <div className="broth-filter-tabs">
+                <button className="filter-tab active" data-filter="all">
+                  <span className="tab-icon">🍲</span>
+                  <span className="tab-text">All Broths</span>
+                </button>
+                <button className="filter-tab" data-filter="regular">
+                  <span className="tab-icon">🔥</span>
+                  <span className="tab-text">Signature</span>
+                </button>
+                <button className="filter-tab" data-filter="vegan">
+                  <span className="tab-icon">🌱</span>
+                  <span className="tab-text">Plant-Based</span>
+                </button>
+              </div>
+
+              {/* Broths Grid */}
+              <div className="broths-masonry-grid">
+                {menuData[activeCategory].items.map((item, index) => (
+                  <div key={index} className={`broth-card-redesigned ${item.vegan ? 'vegan-broth' : 'regular-broth'} ${item.spicy ? 'spicy-broth' : ''}`}>
+                    {/* Card Header with Image */}
+                    <div className="broth-card-header">
+                      <div className="broth-image-wrapper">
+                        <Image
+                          src={item.image}
+                          alt={item.name}
+                          width={400}
+                          height={280}
+                          className="broth-image-redesigned"
+                        />
+                        <div className="image-overlay">
+                          <div className="broth-badges-redesigned">
+                            {item.spicy && (
+                              <div className="badge spicy-badge-new">
+                                <span className="badge-icon">🌶️</span>
+                                <span className="badge-text">Spicy</span>
+                              </div>
+                            )}
+                            {item.vegan && (
+                              <div className="badge vegan-badge-new">
+                                <span className="badge-icon">🌱</span>
+                                <span className="badge-text">Plant-Based</span>
+                              </div>
+                            )}
+                          </div>
+                          <div className="broth-number-redesigned">
+                            {String(index + 1).padStart(2, '0')}
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <p className="broth-chinese-name">{item.chineseName}</p>
-                    <p className="broth-description">{item.description}</p>
+
+                    {/* Card Content */}
+                    <div className="broth-card-content">
+                      <div className="broth-title-section">
+                        <h3 className="broth-name-redesigned">{item.name}</h3>
+                        <p className="broth-chinese-name-redesigned">{item.chineseName}</p>
+                      </div>
+                      
+                      <div className="broth-description-section">
+                        <p className="broth-description-redesigned">{item.description}</p>
+                      </div>
+
+                      <div className="broth-flavor-profile">
+                        <div className="flavor-indicators">
+                          {item.spicy && <div className="flavor-dot spicy-dot"></div>}
+                          {item.name.toLowerCase().includes('chicken') && <div className="flavor-dot protein-dot"></div>}
+                          {item.name.toLowerCase().includes('tomato') && <div className="flavor-dot fresh-dot"></div>}
+                          {item.name.toLowerCase().includes('miso') && <div className="flavor-dot umami-dot"></div>}
+                          {item.name.toLowerCase().includes('curry') && <div className="flavor-dot aromatic-dot"></div>}
+                          {item.vegan && <div className="flavor-dot vegan-dot"></div>}
+                        </div>
+                        <div className="try-now-button">
+                          <span>Try This Broth</span>
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
                   </div>
+                ))}
+              </div>
+
+              {/* Featured Broth Spotlight */}
+              <div className="featured-broth-spotlight">
+                <div className="spotlight-content">
+                  <div className="spotlight-badge">
+                    <span>🏆</span>
+                    <span>Customer Favorite</span>
+                  </div>
+                  <h3>Signature Mala Tang Broth</h3>
+                  <p>Our most beloved broth, crafted with authentic Sichuan spices and secret ingredients that have been passed down through generations.</p>
+                  <button className="spotlight-cta">
+                    <span>Learn More</span>
+                    <div className="cta-arrow">→</div>
+                  </button>
                 </div>
-              ))}
+                <div className="spotlight-image">
+                  <Image
+                    src="/assets/images/Signature Mala Tang Broth.png"
+                    alt="Signature Mala Tang Broth"
+                    width={300}
+                    height={200}
+                    className="spotlight-broth-image"
+                  />
+                </div>
+              </div>
             </div>
           ) : (
             /* Regular Menu Items Grid */

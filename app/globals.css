@@ -9047,3 +9047,571 @@ p {
     transform: translateY(-4px) scale(1.01);
   }
 }
+
+/* ===== REDESIGNED BROTH SECTION ===== */
+
+/* Container */
+.broths-redesigned-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Filter Tabs */
+.broth-filter-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 48px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  padding: 8px;
+  border-radius: 20px;
+  border: 1px solid rgba(179, 46, 29, 0.1);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.08),
+    0 4px 16px rgba(179, 46, 29, 0.05);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 48px;
+}
+
+.filter-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border: none;
+  background: transparent;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--gray-600);
+  position: relative;
+  overflow: hidden;
+}
+
+.filter-tab::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(179, 46, 29, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.filter-tab:hover::before {
+  left: 100%;
+}
+
+.filter-tab.active {
+  background: linear-gradient(135deg, var(--primary-red) 0%, #FF6B35 100%);
+  color: var(--white);
+  box-shadow: 
+    0 4px 16px rgba(179, 46, 29, 0.3),
+    0 2px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.tab-icon {
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+.filter-tab:hover .tab-icon {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.filter-tab.active .tab-icon {
+  transform: scale(1.1);
+}
+
+/* Masonry Grid */
+.broths-masonry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 32px;
+  margin-bottom: 64px;
+}
+
+/* Broth Cards */
+.broth-card-redesigned {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.08),
+    0 6px 20px rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  transform-origin: center bottom;
+}
+
+.broth-card-redesigned::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    rgba(179, 46, 29, 0.02) 0%, 
+    transparent 25%, 
+    rgba(255, 107, 53, 0.01) 50%, 
+    transparent 75%, 
+    rgba(179, 46, 29, 0.015) 100%);
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.broth-card-redesigned:hover::before {
+  opacity: 1;
+}
+
+.broth-card-redesigned:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 
+    0 24px 60px rgba(0, 0, 0, 0.12),
+    0 12px 30px rgba(179, 46, 29, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
+  border-color: rgba(179, 46, 29, 0.2);
+}
+
+/* Special styling for vegan broths */
+.vegan-broth {
+  border-left: 4px solid #10B981;
+}
+
+.vegan-broth:hover {
+  border-left-color: #059669;
+  box-shadow: 
+    0 24px 60px rgba(0, 0, 0, 0.12),
+    0 12px 30px rgba(16, 185, 129, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
+}
+
+/* Special styling for spicy broths */
+.spicy-broth {
+  border-left: 4px solid #EF4444;
+}
+
+.spicy-broth:hover {
+  border-left-color: #DC2626;
+  box-shadow: 
+    0 24px 60px rgba(0, 0, 0, 0.12),
+    0 12px 30px rgba(239, 68, 68, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
+}
+
+/* Card Header */
+.broth-card-header {
+  position: relative;
+}
+
+.broth-image-wrapper {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+}
+
+.broth-image-redesigned {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.broth-card-redesigned:hover .broth-image-redesigned {
+  transform: scale(1.08);
+}
+
+/* Image Overlay */
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    180deg, 
+    rgba(0, 0, 0, 0.1) 0%, 
+    transparent 40%, 
+    transparent 60%, 
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  z-index: 2;
+}
+
+/* Badges */
+.broth-badges-redesigned {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.badge:hover {
+  transform: scale(1.05);
+}
+
+.spicy-badge-new {
+  background: rgba(239, 68, 68, 0.9);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.vegan-badge-new {
+  background: rgba(16, 185, 129, 0.9);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.badge-icon {
+  font-size: 0.9rem;
+}
+
+/* Broth Number */
+.broth-number-redesigned {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 50%;
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--primary-red);
+  box-shadow: 
+    0 6px 20px rgba(0, 0, 0, 0.15),
+    0 2px 8px rgba(179, 46, 29, 0.1);
+  border: 2px solid rgba(179, 46, 29, 0.1);
+  transition: all 0.3s ease;
+}
+
+.broth-card-redesigned:hover .broth-number-redesigned {
+  background: var(--primary-red);
+  color: white;
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 
+    0 8px 24px rgba(179, 46, 29, 0.3),
+    0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Content */
+.broth-card-content {
+  padding: 32px 28px;
+  position: relative;
+  z-index: 2;
+}
+
+.broth-title-section {
+  margin-bottom: 20px;
+}
+
+.broth-name-redesigned {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--gray-800);
+  margin: 0 0 8px 0;
+  line-height: 1.3;
+  transition: color 0.3s ease;
+}
+
+.broth-card-redesigned:hover .broth-name-redesigned {
+  color: var(--primary-red);
+}
+
+.broth-chinese-name-redesigned {
+  font-size: 0.95rem;
+  color: var(--gray-500);
+  margin: 0;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.broth-description-section {
+  margin-bottom: 24px;
+}
+
+.broth-description-redesigned {
+  color: var(--gray-600);
+  line-height: 1.7;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Flavor Profile */
+.broth-flavor-profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flavor-indicators {
+  display: flex;
+  gap: 8px;
+}
+
+.flavor-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor: help;
+  position: relative;
+}
+
+.flavor-dot:hover {
+  transform: scale(1.3);
+}
+
+.spicy-dot { background: linear-gradient(135deg, #EF4444, #DC2626); }
+.protein-dot { background: linear-gradient(135deg, #F59E0B, #D97706); }
+.fresh-dot { background: linear-gradient(135deg, #EF4444, #F97316); }
+.umami-dot { background: linear-gradient(135deg, #8B5A2B, #6B4423); }
+.aromatic-dot { background: linear-gradient(135deg, #8B5CF6, #7C3AED); }
+.vegan-dot { background: linear-gradient(135deg, #10B981, #059669); }
+
+/* Try Now Button */
+.try-now-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, var(--primary-red) 0%, #FF6B35 100%);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 16px rgba(179, 46, 29, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.try-now-button:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 24px rgba(179, 46, 29, 0.3);
+  background: linear-gradient(135deg, var(--primary-red-dark) 0%, var(--primary-red) 100%);
+}
+
+.try-now-button svg {
+  transition: transform 0.3s ease;
+}
+
+.try-now-button:hover svg {
+  transform: translateX(4px);
+}
+
+/* Featured Broth Spotlight */
+.featured-broth-spotlight {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 40px;
+  background: linear-gradient(135deg, 
+    rgba(179, 46, 29, 0.05) 0%, 
+    rgba(255, 107, 53, 0.03) 50%, 
+    rgba(179, 46, 29, 0.05) 100%);
+  border-radius: 32px;
+  padding: 48px;
+  margin-top: 64px;
+  border: 1px solid rgba(179, 46, 29, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.featured-broth-spotlight::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23B32E1D" fill-opacity="0.03"><circle cx="30" cy="30" r="2"/></g></svg>') repeat;
+  z-index: 1;
+}
+
+.spotlight-content {
+  position: relative;
+  z-index: 2;
+}
+
+.spotlight-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #FCD34D 0%, #F59E0B 100%);
+  color: #92400E;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 16px rgba(245, 158, 11, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.spotlight-content h3 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--gray-800);
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+}
+
+.spotlight-content p {
+  font-size: 1.1rem;
+  color: var(--gray-600);
+  line-height: 1.7;
+  margin: 0 0 32px 0;
+}
+
+.spotlight-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, var(--primary-red) 0%, #FF6B35 100%);
+  color: white;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 24px rgba(179, 46, 29, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.spotlight-cta:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 32px rgba(179, 46, 29, 0.3);
+}
+
+.cta-arrow {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.spotlight-cta:hover .cta-arrow {
+  transform: translateX(4px);
+}
+
+.spotlight-image {
+  position: relative;
+  z-index: 2;
+}
+
+.spotlight-broth-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.featured-broth-spotlight:hover .spotlight-broth-image {
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .broths-masonry-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+  }
+  
+  .featured-broth-spotlight {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 32px;
+  }
+  
+  .spotlight-image {
+    order: -1;
+  }
+  
+  .spotlight-content h3 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .broth-filter-tabs {
+    flex-direction: column;
+    max-width: 300px;
+  }
+  
+  .filter-tab {
+    justify-content: center;
+    padding: 16px 24px;
+  }
+  
+  .broths-masonry-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .broth-image-wrapper {
+    height: 240px;
+  }
+  
+  .broth-card-content {
+    padding: 24px 20px;
+  }
+  
+  .broth-flavor-profile {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .featured-broth-spotlight {
+    padding: 24px;
+    margin-top: 48px;
+  }
+  
+  .spotlight-content h3 {
+    font-size: 1.6rem;
+  }
+  
+  .spotlight-content p {
+    font-size: 1rem;
+  }
+}
