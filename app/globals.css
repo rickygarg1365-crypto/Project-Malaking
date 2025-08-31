@@ -3775,6 +3775,8 @@ p {
   grid-template-columns: 1fr 1fr;
   gap: 80px;
   align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .mission-story {
@@ -10542,15 +10544,18 @@ p {
 
 .hero-badge-simple {
   display: inline-block;
-  background: rgba(179, 46, 29, 0.9);
-  color: white;
-  padding: 8px 16px;
-  border-radius: 20px;
+  background: linear-gradient(135deg, #FCD34D 0%, #F59E0B 100%);
+  color: #92400E;
+  padding: 12px 24px;
+  border-radius: 25px;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 1px;
+  box-shadow: 0 4px 16px rgba(245, 158, 11, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .hero-title-simple {

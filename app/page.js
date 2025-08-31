@@ -15,7 +15,7 @@ export default function HomePage() {
       id: 1,
       title: "Grand Opening Week!",
       subtitle: "August 29th - September 5th",
-      description: "🎉 We're officially opening our doors! Join us for our grand opening week celebration with amazing offers: 20% off on all dishes and 50% off on all drinks. Be among the first to experience Surrey's newest hot pot destination!",
+      description: "We're officially opening our doors! Join us for our grand opening week celebration with amazing offers: 20% off on all dishes and 50% off on all drinks. Be among the first to experience Surrey's newest hot pot destination!",
       image: "/assets/images/Grand Opening.jpg",
       cta: "Find Location",
       ctaLink: "/locations"

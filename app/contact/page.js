@@ -171,7 +171,7 @@ export default function ContactPage() {
                       <span className="action-value">+1 (604) 496-3148</span>
                     </div>
                   </a>
-                  <a href="mailto:info@malakinghotpot.ca" className="quick-action email-action">
+                  <a href="mailto:info@malaking.ca" className="quick-action email-action">
                     <div className="action-icon">✉️</div>
                     <div className="action-content">
                       <span className="action-label">Email Us</span>

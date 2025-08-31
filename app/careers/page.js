@@ -154,7 +154,7 @@ export default function CareersPage() {
                 <span className="benefit-tag">📅 Flexible Schedule</span>
                 <span className="benefit-tag">🍜 Meal Discounts</span>
               </div>
-              <button className="apply-btn-modern">Apply Now</button>
+              <button className="apply-btn-modern" onClick={() => document.getElementById('application-form').scrollIntoView({ behavior: 'smooth' })}>Apply Now</button>
             </div>
 
             {/* Server */}
@@ -184,7 +184,7 @@ export default function CareersPage() {
                 <span className="benefit-tag">📅 Flexible Schedule</span>
                 <span className="benefit-tag">🎓 Training Provided</span>
               </div>
-              <button className="apply-btn-modern">Apply Now</button>
+              <button className="apply-btn-modern" onClick={() => document.getElementById('application-form').scrollIntoView({ behavior: 'smooth' })}>Apply Now</button>
             </div>
 
             {/* Cashier */}
@@ -214,7 +214,7 @@ export default function CareersPage() {
                 <span className="benefit-tag">📅 Part-time Hours</span>
                 <span className="benefit-tag">🎓 Training Provided</span>
               </div>
-              <button className="apply-btn-modern">Apply Now</button>
+              <button className="apply-btn-modern" onClick={() => document.getElementById('application-form').scrollIntoView({ behavior: 'smooth' })}>Apply Now</button>
             </div>
 
           </div>
@@ -222,7 +222,7 @@ export default function CareersPage() {
       </section>
 
       {/* Application Form */}
-      <section className="application-section-modern">
+      <section id="application-form" className="application-section-modern">
         <div className="container">
           <div className="application-header">
             <div className="section-badge">Apply Today</div>
