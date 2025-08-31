@@ -155,6 +155,12 @@ export default function HomePage() {
       <section className="about-section">
         <div className="container">
           <div className="about-grid">
+            <div className="about-brand">
+              <div className="brand-display">
+                <h2 className="brand-name">Mala King</h2>
+                <h3 className="brand-subtitle">Hot Pot</h3>
+              </div>
+            </div>
             <div className="about-content">
               <div className="section-badge">About Us</div>
               <h3 className="section-subtitle">Weigh to Pay, Made Your Way</h3>
@@ -172,12 +178,6 @@ export default function HomePage() {
                   </svg>
                 </Link>
                 <Link href="/about" className="btn btn-secondary">Learn More</Link>
-              </div>
-            </div>
-            <div className="about-brand">
-              <div className="brand-display">
-                <h2 className="brand-name">Mala King</h2>
-                <h3 className="brand-subtitle">Hot Pot</h3>
               </div>
             </div>
           </div>
