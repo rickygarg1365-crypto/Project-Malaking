@@ -815,7 +815,7 @@ p {
   overflow-x: hidden;
 }
 
-/* ===== HERO SECTION - REDESIGNED ===== */
+/* ===== HERO SECTION - PREMIUM DESIGN ===== */
 
 .hero-section {
   position: relative;
@@ -10758,16 +10758,19 @@ p {
 
 .about-hero-simple {
   position: relative;
-  min-height: 60vh;
+  height: 80vh;
+  min-height: 600px;
   margin-top: 76px;
   overflow: hidden;
 }
 
 .about-hero-background-simple {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 60vh;
-  overflow: hidden;
+  height: 100%;
+  z-index: 0;
 }
 
 .about-hero-image-simple {
