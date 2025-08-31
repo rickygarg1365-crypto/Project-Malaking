@@ -33,7 +33,7 @@ export default function ContactPage() {
       <section className="contact-hero-modern">
         <div className="hero-bg-contact">
           <Image 
-            src="/assets/images/hero-background-77cf30.png" 
+            src="/assets/images/Restaurant Look.jpg" 
             alt="Contact Hero Background"
             fill
             style={{ objectFit: 'cover' }}

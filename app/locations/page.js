@@ -8,7 +8,7 @@ export default function LocationsPage() {
       <section className="locations-hero-modern">
         <div className="hero-bg-locations">
           <Image 
-            src="/assets/images/hero-background-77cf30.png" 
+            src="/assets/images/Restaurant Look.jpg" 
             alt="Location Hero Background"
             fill
             style={{ objectFit: 'cover' }}

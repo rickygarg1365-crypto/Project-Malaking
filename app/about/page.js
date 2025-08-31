@@ -10,7 +10,7 @@ export default function AboutPage() {
       <section className="about-hero-simple">
         <div className="hero-background-simple">
           <Image 
-            src="/assets/images/hero-background-77cf30.png" 
+            src="/assets/images/Restaurant Look.jpg" 
             alt="About Hero Background"
             fill
             style={{ objectFit: 'cover' }}
@@ -157,109 +157,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="team-section-modern">
-        <div className="container">
-          <div className="team-header-modern">
-            <div className="section-badge">Our Team</div>
-            <h2 className="team-title-modern">Meet the Masters</h2>
-            <p className="team-subtitle-modern">
-              The passionate culinary artists and hospitality experts who make the magic happen
-            </p>
-          </div>
-          <div className="team-grid-modern">
-            <div className="team-card-modern">
-              <div className="member-image-modern">
-                <Image 
-                  src="/assets/images/social-2-250f0d.png" 
-                  alt="Chef Li"
-                  fill
-                  style={{ objectFit: 'cover' }}
-                />
-                <div className="member-overlay-modern"></div>
-                <div className="member-badge">Head Chef</div>
-              </div>
-              <div className="member-content-modern">
-                <h3 className="member-name-modern">Chef Li</h3>
-                <p className="member-title-modern">Culinary Master</p>
-                <p className="member-bio-modern">
-                  With over 15 years of experience in authentic Chinese cuisine, Chef Li brings traditional techniques and modern innovation to every dish we serve.
-                </p>
-                <div className="member-achievements">
-                  <div className="achievement">
-                    <span className="achievement-number">15+</span>
-                    <span className="achievement-label">Years Experience</span>
-                  </div>
-                  <div className="achievement">
-                    <span className="achievement-number">50+</span>
-                    <span className="achievement-label">Signature Recipes</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="team-card-modern">
-              <div className="member-image-modern">
-                <Image 
-                  src="/assets/images/social-3-27e44e.png" 
-                  alt="Manager Sarah"
-                  fill
-                  style={{ objectFit: 'cover' }}
-                />
-                <div className="member-overlay-modern"></div>
-                <div className="member-badge">General Manager</div>
-              </div>
-              <div className="member-content-modern">
-                <h3 className="member-name-modern">Sarah Chen</h3>
-                <p className="member-title-modern">Hospitality Expert</p>
-                <p className="member-bio-modern">
-                  Sarah ensures every guest feels welcome and every experience is exceptional. Her passion for hospitality drives our commitment to outstanding service.
-                </p>
-                <div className="member-achievements">
-                  <div className="achievement">
-                    <span className="achievement-number">10+</span>
-                    <span className="achievement-label">Years Service</span>
-                  </div>
-                  <div className="achievement">
-                    <span className="achievement-number">1000+</span>
-                    <span className="achievement-label">Happy Guests</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="team-card-modern">
-              <div className="member-image-modern">
-                <Image 
-                  src="/assets/images/social-4-3557d9.png" 
-                  alt="Sous Chef Mike"
-                  fill
-                  style={{ objectFit: 'cover' }}
-                />
-                <div className="member-overlay-modern"></div>
-                <div className="member-badge">Sous Chef</div>
-              </div>
-              <div className="member-content-modern">
-                <h3 className="member-name-modern">Mike Zhang</h3>
-                <p className="member-title-modern">Quality Specialist</p>
-                <p className="member-bio-modern">
-                  Mike's expertise in ingredient preparation and quality control ensures that every ingredient that reaches your table is fresh, safe, and delicious.
-                </p>
-                <div className="member-achievements">
-                  <div className="achievement">
-                    <span className="achievement-number">8+</span>
-                    <span className="achievement-label">Years Experience</span>
-                  </div>
-                  <div className="achievement">
-                    <span className="achievement-number">100+</span>
-                    <span className="achievement-label">Ingredients</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Call to Action Section */}
       <section className="cta-section-about">

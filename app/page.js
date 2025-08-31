@@ -12,10 +12,10 @@ export default function HomePage() {
   const heroSlides = [
     {
       id: 1,
-      title: "Grand Opening Tomorrow!",
-      subtitle: "Friday, August 29th",
-      description: "🎉 We're officially opening our doors! Join us for our grand opening celebration and be among the first to experience Surrey's newest hot pot destination.",
-      image: "/assets/images/hero-background-77cf30.png",
+      title: "Grand Opening Week!",
+      subtitle: "August 29th - September 5th",
+      description: "🎉 We're officially opening our doors! Join us for our grand opening week celebration with amazing offers: 20% off on all dishes and 50% off on all drinks. Be among the first to experience Surrey's newest hot pot destination!",
+      image: "/assets/images/Restaurant Look.jpg",
       cta: "Find Location",
       ctaLink: "/locations"
     },
@@ -24,7 +24,7 @@ export default function HomePage() {
       title: "Authentic Hot Pot Experience",
       subtitle: "Fresh & Flavorful",
       description: "Discover Surrey's premier hot pot destination with our signature Ma La Tang broth and premium ingredients.",
-      image: "/assets/images/social-1-1633e4.png",
+      image: "/assets/images/Fresh Ingredients.jpg",
       cta: "Explore Menu",
       ctaLink: "/menu"
     },
@@ -33,7 +33,7 @@ export default function HomePage() {
       title: "Weigh to Pay, Your Way",
       subtitle: "Customizable & Affordable",
       description: "Choose from our fresh selection of meats, seafood, and vegetables. Pay only for what you love.",
-      image: "/assets/images/social-2-250f0d.png",
+      image: "/assets/images/Grand Opening.jpg",
       cta: "How It Works",
       ctaLink: "#how-it-works"
     }

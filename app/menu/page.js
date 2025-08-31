@@ -385,7 +385,7 @@ export default function MenuPage() {
       <section className="menu-hero-modern">
         <div className="hero-bg-menu">
           <Image
-            src="/assets/images/hero-background-77cf30.png"
+            src="/assets/images/Restaurant Look.jpg"
             alt="Menu Hero Background"
             fill
             style={{ objectFit: 'cover' }}
