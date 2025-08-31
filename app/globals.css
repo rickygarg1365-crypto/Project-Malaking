@@ -2591,30 +2591,53 @@ p {
     gap: 24px;
   }
   
-  /* Fix tablet header issues */
+  /* Enhanced tablet header fix */
   .navbar {
-    padding: 0 20px;
+    padding: 0 16px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  .nav-container {
+    padding: 12px 0;
   }
   
   .nav-content {
-    padding: 0 10px;
+    padding: 0 8px;
+    gap: 16px;
   }
   
   .nav-actions {
-    gap: 12px;
+    gap: 8px;
   }
   
   .nav-action {
-    padding: 10px 16px;
-    font-size: 0.9rem;
+    padding: 8px 14px;
+    font-size: 0.85rem;
+    white-space: nowrap;
   }
   
   .logo-title {
-    font-size: 20px;
+    font-size: 18px;
   }
   
   .logo-subtitle {
-    font-size: 8px;
+    font-size: 7px;
+  }
+  
+  .nav-menu {
+    gap: 16px;
+  }
+  
+  .nav-link {
+    font-size: 0.9rem;
+    padding: 8px 12px;
   }
 }
 
@@ -10096,6 +10119,74 @@ p {
   
   .drinks-toppings-section {
     padding: 20px;
+  }
+  
+  /* Careers Page Mobile Styles */
+  .why-work-section {
+    padding: 60px 0;
+  }
+  
+  .why-work-header {
+    margin-bottom: 40px;
+  }
+  
+  .why-work-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .why-work-card {
+    padding: 24px 20px;
+  }
+  
+  .work-icon {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+  }
+  
+  .why-work-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+  }
+  
+  .why-work-card p {
+    font-size: 0.9rem;
+  }
+  
+  .positions-section {
+    padding: 60px 0;
+  }
+  
+  .positions-header {
+    margin-bottom: 40px;
+  }
+  
+  .positions-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .position-card {
+    padding: 24px 20px;
+  }
+  
+  .position-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .position-badge {
+    margin-left: 0;
+    align-self: flex-start;
+  }
+  
+  .careers-hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .careers-hero-description {
+    font-size: 1.1rem;
   }
 }
 
