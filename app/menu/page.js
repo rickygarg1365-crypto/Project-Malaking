@@ -132,53 +132,80 @@ export default function MenuPage() {
     drinks: {
       title: 'Drinks',
       subtitle: 'Fresh beverages and specialty drinks',
-      items: [
-        // Slushie Series
-        { name: 'Pinacolada Slushie', price: 6.75, category: 'Slushie Series', popular: true },
-        { name: 'Fresh Mango Slushie', price: 6.75, category: 'Slushie Series', popular: true },
-        { name: 'Fresh Strawberry Slushie', price: 6.75, category: 'Slushie Series' },
-        { name: 'Fresh Banana Milk Slushie', price: 6.75, category: 'Slushie Series' },
-        { name: 'Fresh Strawberry Mango Slushie', price: 6.75, category: 'Slushie Series' },
-        { name: 'Fresh Strawberry Banana Slushie', price: 6.75, category: 'Slushie Series' },
-        { name: 'Fresh Whole Avocado Slushie', price: 6.75, category: 'Slushie Series', popular: true },
-        { name: 'Fresh Avocado Matcha Slushie', price: 6.75, category: 'Slushie Series' },
-        { name: 'Oreo Cookies and Cream Slushie', price: 6.75, category: 'Slushie Series', popular: true },
-        { name: 'Lychee Slushie', price: 6.75, category: 'Slushie Series' },
-        { name: 'Honeydew Slushie', price: 6.75, category: 'Slushie Series' },
-        
-        // Milktea Series
-        { name: 'Original Milktea', price: 6.50, category: 'Milktea Series' },
-        { name: 'Brown Sugar Milktea', price: 6.50, category: 'Milktea Series', popular: true },
-        { name: 'Taro Milktea', price: 6.50, category: 'Milktea Series', popular: true },
-        { name: 'Coconut Milktea', price: 6.50, category: 'Milktea Series' },
-        { name: 'Strawberry Milktea', price: 6.50, category: 'Milktea Series' },
-        { name: 'Mango Milktea', price: 6.50, category: 'Milktea Series' },
-        { name: 'Matcha Milktea', price: 6.50, category: 'Milktea Series', popular: true },
-        { name: 'Thai Milktea', price: 6.50, category: 'Milktea Series', popular: true },
-        
-        // Sparkling
-        { name: 'Mango Sparkling', price: 5.50, category: 'Sparkling' },
-        { name: 'Peach Sparkling', price: 5.50, category: 'Sparkling', popular: true },
-        { name: 'Strawberry Sparkling', price: 5.50, category: 'Sparkling', popular: true },
-        { name: 'Lychee Sparkling', price: 5.50, category: 'Sparkling' },
-        { name: 'Passionfruit Sparkling', price: 5.50, category: 'Sparkling' },
-        
-        // Fruit Tea
-        { name: 'Fruit Tea (Black/Green)', price: 5.75, category: 'Fruit Tea' },
-        { name: 'Passionfruit Tea', price: 5.75, category: 'Fruit Tea' },
-        { name: 'Passionfruit Pineapple Tea', price: 5.75, category: 'Fruit Tea' },
-        { name: 'Mango Pineapple Tea', price: 5.75, category: 'Fruit Tea' },
-        { name: 'Strawberry Mango Tea', price: 5.75, category: 'Fruit Tea' },
-        { name: 'Fresh Lime Lemon Tea', price: 5.75, category: 'Fruit Tea' },
-        
-        // Lemonade
-        { name: 'Original Lemonade', price: 5.50, category: 'Lemonade', popular: true },
-        { name: 'Mango Lemonade', price: 5.50, category: 'Lemonade' },
-        { name: 'Peach Lemonade', price: 5.50, category: 'Lemonade' },
-        { name: 'Strawberry Lemonade', price: 5.50, category: 'Lemonade' },
-        { name: 'Lychee Lemonade', price: 5.50, category: 'Lemonade' },
-        { name: 'Passionfruit Lemonade', price: 5.50, category: 'Lemonade' }
-      ]
+      categorized: true,
+      categories: {
+        'Slushie Series': {
+          title: 'Slushie Series',
+          subtitle: 'Creamy and refreshing blended drinks',
+          price: 6.75,
+          items: [
+            { name: 'Pinacolada Slushie', popular: true },
+            { name: 'Fresh Mango Slushie', popular: true },
+            { name: 'Fresh Strawberry Slushie' },
+            { name: 'Fresh Banana Milk Slushie' },
+            { name: 'Fresh Strawberry Mango Slushie' },
+            { name: 'Fresh Strawberry Banana Slushie' },
+            { name: 'Fresh Whole Avocado Slushie', popular: true },
+            { name: 'Fresh Avocado Matcha Slushie' },
+            { name: 'Oreo Cookies and Cream Slushie', popular: true },
+            { name: 'Lychee Slushie' },
+            { name: 'Honeydew Slushie' }
+          ]
+        },
+        'Milktea Series': {
+          title: 'Milktea Series',
+          subtitle: 'Classic and flavored milk teas',
+          price: 6.50,
+          items: [
+            { name: 'Original Milktea' },
+            { name: 'Brown Sugar Milktea', popular: true },
+            { name: 'Taro Milktea', popular: true },
+            { name: 'Coconut Milktea' },
+            { name: 'Strawberry Milktea' },
+            { name: 'Mango Milktea' },
+            { name: 'Matcha Milktea', popular: true },
+            { name: 'Thai Milktea', popular: true }
+          ]
+        },
+        'Sparkling': {
+          title: 'Sparkling Drinks',
+          subtitle: 'Fizzy and refreshing fruit sodas',
+          price: 5.50,
+          items: [
+            { name: 'Mango Sparkling' },
+            { name: 'Peach Sparkling', popular: true },
+            { name: 'Strawberry Sparkling', popular: true },
+            { name: 'Lychee Sparkling' },
+            { name: 'Passionfruit Sparkling' }
+          ]
+        },
+        'Fruit Tea': {
+          title: 'Fruit Tea',
+          subtitle: 'Fresh fruit-infused teas',
+          price: 5.75,
+          items: [
+            { name: 'Fruit Tea (Black/Green)' },
+            { name: 'Passionfruit Tea' },
+            { name: 'Passionfruit Pineapple Tea' },
+            { name: 'Mango Pineapple Tea' },
+            { name: 'Strawberry Mango Tea' },
+            { name: 'Fresh Lime Lemon Tea' }
+          ]
+        },
+        'Lemonade': {
+          title: 'Lemonade',
+          subtitle: 'Tangy and refreshing citrus drinks',
+          price: 5.50,
+          items: [
+            { name: 'Original Lemonade', popular: true },
+            { name: 'Mango Lemonade' },
+            { name: 'Peach Lemonade' },
+            { name: 'Strawberry Lemonade' },
+            { name: 'Lychee Lemonade' },
+            { name: 'Passionfruit Lemonade' }
+          ]
+        }
+      }
     },
     meatballs: {
       title: 'Meatballs & Seafood Balls',
@@ -405,20 +432,7 @@ export default function MenuPage() {
             <p className="category-subtitle">{menuData[activeCategory].subtitle}</p>
           </div>
 
-          {/* Special Toppings Section for Drinks */}
-          {activeCategory === 'drinks' && (
-            <div className="toppings-section">
-              <h3 className="toppings-title">Choose your Toppings <span className="toppings-price">+$0.70</span></h3>
-              <div className="toppings-grid">
-                {toppings.map((topping, index) => (
-                  <div key={index} className="topping-item">
-                    <span className="topping-dot">•</span>
-                    <span className="topping-name">{topping}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
+
 
           {/* Redesigned Broths Section */}
           {activeCategory === 'broths' ? (
@@ -480,46 +494,96 @@ export default function MenuPage() {
               </div>
             </div>
           ) : (
-            /* Regular Menu Items Grid */
+            /* Menu Items */
             <div className="menu-section">
-              {/* Pricing Header for Weigh-to-Pay Sections */}
-              {menuData[activeCategory].weighToPay && (
-                <div className="weigh-to-pay-header">
-                  <div className="pricing-badge">
-                    <span className="price-amount">${menuData[activeCategory].pricePerWeight}</span>
-                    <span className="price-unit">per {menuData[activeCategory].weightUnit}</span>
-                  </div>
-                  <p className="pricing-description">
-                    All items in this section are priced by weight. Simply select what you want and we'll weigh it for you!
-                  </p>
-                </div>
-              )}
-              
-              {/* Items Grid */}
-              <div className="ingredients-grid">
-                {menuData[activeCategory].items.map((item, index) => (
-                  <div key={index} className={`ingredient-card ${menuData[activeCategory].weighToPay ? 'weigh-to-pay' : 'regular-item'}`}>
-                    <div className="ingredient-content">
-                      <h3 className="ingredient-name-english">{item.name}</h3>
-                      {item.chineseName && (
-                        <p className="ingredient-name-chinese">{item.chineseName}</p>
-                      )}
-                      
-                      {/* Regular pricing for drinks */}
-                      {!menuData[activeCategory].weighToPay && (
-                        <div className="ingredient-details">
-                          {item.popular && <span className="popular-badge">Most Favorite</span>}
-                          {item.spicy && <span className="spicy-badge">🌶️</span>}
-                          {item.vegan && <span className="vegan-badge">🌱</span>}
-                          {item.price && <span className="ingredient-price">${item.price}</span>}
-                          {item.description && <p className="ingredient-description">{item.description}</p>}
-                          {item.category && <span className="ingredient-category">{item.category}</span>}
+              {/* Categorized Drinks Layout */}
+              {menuData[activeCategory].categorized ? (
+                <div className="drinks-categorized-container">
+                  {Object.entries(menuData[activeCategory].categories).map(([categoryKey, category]) => (
+                    <div key={categoryKey} className="drinks-category-section">
+                      {/* Category Header */}
+                      <div className="drinks-category-header">
+                        <div className="category-title-container">
+                          <h3 className="drinks-category-title">{category.title}</h3>
+                          <div className="drinks-category-price">${category.price}</div>
                         </div>
-                      )}
+                        <p className="drinks-category-subtitle">{category.subtitle}</p>
+                      </div>
+                      
+                      {/* Category Items */}
+                      <div className="drinks-items-grid">
+                        {category.items.map((item, index) => (
+                          <div key={index} className="drink-item-card">
+                            <div className="drink-item-content">
+                              <h4 className="drink-item-name">{item.name}</h4>
+                              {item.popular && (
+                                <span className="drink-popular-badge">Most Favorite</span>
+                              )}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                  
+                  {/* Toppings Section */}
+                  <div className="drinks-toppings-section">
+                    <div className="toppings-header">
+                      <h3 className="toppings-title">Add Toppings</h3>
+                      <div className="toppings-price">+$0.70</div>
+                    </div>
+                    <div className="toppings-grid">
+                      {toppings.map((topping, index) => (
+                        <div key={index} className="topping-item-card">
+                          <span className="topping-name">{topping}</span>
+                        </div>
+                      ))}
                     </div>
                   </div>
-                ))}
-              </div>
+                </div>
+              ) : (
+                /* Regular Items Layout */
+                <div>
+                  {/* Pricing Header for Weigh-to-Pay Sections */}
+                  {menuData[activeCategory].weighToPay && (
+                    <div className="weigh-to-pay-header">
+                      <div className="pricing-badge">
+                        <span className="price-amount">${menuData[activeCategory].pricePerWeight}</span>
+                        <span className="price-unit">per {menuData[activeCategory].weightUnit}</span>
+                      </div>
+                      <p className="pricing-description">
+                        All items in this section are priced by weight. Simply select what you want and we'll weigh it for you!
+                      </p>
+                    </div>
+                  )}
+                  
+                  {/* Items Grid */}
+                  <div className="ingredients-grid">
+                    {menuData[activeCategory].items.map((item, index) => (
+                      <div key={index} className={`ingredient-card ${menuData[activeCategory].weighToPay ? 'weigh-to-pay' : 'regular-item'}`}>
+                        <div className="ingredient-content">
+                          <h3 className="ingredient-name-english">{item.name}</h3>
+                          {item.chineseName && (
+                            <p className="ingredient-name-chinese">{item.chineseName}</p>
+                          )}
+                          
+                          {/* Regular pricing for non-weigh items */}
+                          {!menuData[activeCategory].weighToPay && (
+                            <div className="ingredient-details">
+                              {item.popular && <span className="popular-badge">Most Favorite</span>}
+                              {item.spicy && <span className="spicy-badge">🌶️</span>}
+                              {item.vegan && <span className="vegan-badge">🌱</span>}
+                              {item.price && <span className="ingredient-price">${item.price}</span>}
+                              {item.description && <p className="ingredient-description">{item.description}</p>}
+                              {item.category && <span className="ingredient-category">{item.category}</span>}
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           )}
         </div>
