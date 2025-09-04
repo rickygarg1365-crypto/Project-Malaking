@@ -2,7 +2,6 @@ import './globals.css'
 import { Poppins } from 'next/font/google'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import UpArrowButton from '../components/UpArrowButton'
 
 
 const poppins = Poppins({ 
@@ -81,7 +80,6 @@ export default function RootLayout({ children }) {
           {children}
         </main>
         <Footer />
-        <UpArrowButton />
       </body>
     </html>
   )
