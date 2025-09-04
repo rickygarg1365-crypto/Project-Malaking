@@ -3484,8 +3484,8 @@ p {
   transition: all var(--transition-fast);
   padding: 2px 8px;
   border-radius: 8px;
-  background: rgba(179, 46, 29, 0.1);
-  border: 1px solid rgba(179, 46, 29, 0.2);
+  background: transparent;
+  border: 1px solid transparent;
 }
 
 .designer-link-exact::after {
@@ -3506,9 +3506,9 @@ p {
 }
 
 .designer-link-exact:hover {
-  color: #FFFFFF;
-  background: rgba(179, 46, 29, 0.2);
-  border-color: rgba(179, 46, 29, 0.4);
+  color: #E4DDCB;
+  background: rgba(228, 221, 203, 0.08);
+  border-color: rgba(228, 221, 203, 0.2);
   transform: scale(1.05);
 }
 
@@ -3614,8 +3614,8 @@ p {
   right: 30px;
   width: 56px;
   height: 56px;
-  background: linear-gradient(135deg, var(--primary-red), #c83a2a);
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: #E4DDCB;
+  border: 2px solid rgba(179, 46, 29, 0.2);
   border-radius: 16px;
   color: white;
   cursor: pointer;
@@ -3676,13 +3676,13 @@ p {
 .up-arrow-button svg,
 .up-arrow-button img {
   transition: all 0.3s ease;
-  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+  filter: invert(29%) sepia(80%) saturate(1000%) hue-rotate(330deg) brightness(90%) contrast(100%) drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
 }
 
 .up-arrow-button:hover svg,
 .up-arrow-button:hover img {
   transform: translateY(-2px) scale(1.1);
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+  filter: invert(20%) sepia(90%) saturate(1200%) hue-rotate(330deg) brightness(85%) contrast(105%) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
 }
 
 @keyframes bounceIn {
