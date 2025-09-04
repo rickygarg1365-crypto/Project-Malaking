@@ -2,12 +2,10 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import UpArrowButton from './UpArrowButton'
 
 export default function Footer() {
   return (
     <footer className="footer-exact">
-      <UpArrowButton />
       {/* Main Footer Content */}
       <div className="footer-main-exact">
         <div className="container">
