@@ -1,0 +1,24 @@
+{
+  "name": "malaking-hotpot-website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "deploy": "node deploy.js",
+    "deploy:vercel": "vercel --prod",
+    "pwa-icons": "node scripts/generate-pwa-icons.js"
+  },
+  "dependencies": {
+    "next": "^14.2.32",
+    "nodemailer": "^7.0.6",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.0.0"
+  }
+}
