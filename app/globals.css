@@ -6755,7 +6755,7 @@ p {
   color: var(--gray-600);
   line-height: 1.5;
   margin: 0;
-  text-align: justify;
+  text-align: left;
 }
 
 /* Pot Illustration Placeholders */

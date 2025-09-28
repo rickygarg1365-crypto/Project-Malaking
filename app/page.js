@@ -266,10 +266,6 @@ export default function HomePage() {
                   <p className="broth-description">
                     A bold and fiery Szechuan-style broth infused with fragrant chili oil, numbing peppercorns, and over a dozen spices.
                   </p>
-                  <div className="broth-tags">
-                    <span className="tag spicy">Spicy</span>
-                    <span className="tag popular">Popular</span>
-                  </div>
                 </div>
               </div>
               
@@ -289,10 +285,6 @@ export default function HomePage() {
                   <p className="broth-description">
                     A rich, slow-simmered chicken broth with golden clarity, offering deep savory flavor and natural sweetness.
                   </p>
-                  <div className="broth-tags">
-                    <span className="tag mild">Mild</span>
-                    <span className="tag healthy">Healthy</span>
-                  </div>
                 </div>
               </div>
               
@@ -312,10 +304,6 @@ export default function HomePage() {
                   <p className="broth-description">
                     A tangy Thai favorite bursting with lemongrass, lime leaves, chili, and a touch of coconut.
                   </p>
-                  <div className="broth-tags">
-                    <span className="tag spicy">Spicy</span>
-                    <span className="tag tangy">Tangy</span>
-                  </div>
                 </div>
               </div>
               
@@ -335,10 +323,6 @@ export default function HomePage() {
                   <p className="broth-description">
                     Creamy, aromatic, and slightly spicy - made with coconut milk, curry paste, and Southeast Asian herbs.
                   </p>
-                  <div className="broth-tags">
-                    <span className="tag creamy">Creamy</span>
-                    <span className="tag aromatic">Aromatic</span>
-                  </div>
                 </div>
               </div>
 
@@ -358,10 +342,6 @@ export default function HomePage() {
                   <p className="broth-description">
                     Rich and complex Japanese broth featuring aged black garlic with deep umami flavors and subtle sweetness.
                   </p>
-                  <div className="broth-tags">
-                    <span className="tag mild">Mild</span>
-                    <span className="tag aromatic">Aromatic</span>
-                  </div>
                 </div>
               </div>
 
@@ -381,10 +361,6 @@ export default function HomePage() {
                   <p className="broth-description">
                     Traditional Japanese miso broth with fermented soybean paste, creating a rich, umami-packed base.
                   </p>
-                  <div className="broth-tags">
-                    <span className="tag mild">Mild</span>
-                    <span className="tag healthy">Healthy</span>
-                  </div>
                 </div>
               </div>
 
@@ -404,10 +380,6 @@ export default function HomePage() {
                   <p className="broth-description">
                     Aromatic Thai curry broth with coconut milk, lemongrass, galangal, and traditional curry spices.
                   </p>
-                  <div className="broth-tags">
-                    <span className="tag spicy">Spicy</span>
-                    <span className="tag creamy">Creamy</span>
-                  </div>
                 </div>
               </div>
             </div>
