@@ -1843,68 +1843,7 @@ p {
   font-size: 0.95rem;
 }
 
-.broth-tags {
-  display: flex;
-  gap: var(--spacing-xs);
-  flex-wrap: wrap;
-}
 
-.tag {
-  padding: var(--spacing-xs) var(--spacing-sm);
-  border-radius: 50px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  border: 1px solid transparent;
-  transition: all var(--transition-fast);
-}
-
-.tag:hover {
-  transform: scale(1.05);
-}
-
-.tag.spicy {
-  background: linear-gradient(135deg, #FEE2E2 0%, #FCA5A5 100%);
-  color: #DC2626;
-  border-color: #FCA5A5;
-}
-
-.tag.popular {
-  background: linear-gradient(135deg, #DBEAFE 0%, #93C5FD 100%);
-  color: #2563EB;
-  border-color: #93C5FD;
-}
-
-.tag.mild {
-  background: linear-gradient(135deg, #D1FAE5 0%, #6EE7B7 100%);
-  color: #059669;
-  border-color: #6EE7B7;
-}
-
-.tag.healthy {
-  background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
-  color: #D97706;
-  border-color: #FDE68A;
-}
-
-.tag.tangy {
-  background: linear-gradient(135deg, #FCE7F3 0%, #F9A8D4 100%);
-  color: #EC4899;
-  border-color: #F9A8D4;
-}
-
-.tag.creamy {
-  background: linear-gradient(135deg, #F3E8FF 0%, #DDD6FE 100%);
-  color: #7C3AED;
-  border-color: #DDD6FE;
-}
-
-.tag.aromatic {
-  background: linear-gradient(135deg, #ECFDF5 0%, #A7F3D0 100%);
-  color: #047857;
-  border-color: #A7F3D0;
-}
 
 .scroll-indicators {
   display: flex;
