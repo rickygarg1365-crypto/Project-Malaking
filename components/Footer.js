@@ -140,7 +140,7 @@ export default function Footer() {
           <div className="footer-bottom-content-exact">
             <p className="copyright-exact">© 2024 Mala King Hotpot. All rights reserved.</p>
             <p className="designer-credit-exact">
-              Designed by <a href="https://ricky-code-two.vercel.app/" target="_blank" rel="noopener noreferrer" className="designer-link-exact">Rylenthra</a>
+              Designed by <a href="https://rylenthra.vercel.app/" target="_blank" rel="noopener noreferrer" className="designer-link-exact">Rylenthra</a>
             </p>
             <div className="footer-legal-exact">
               <Link href="/privacy" className="legal-link-exact">Privacy Policy</Link>
